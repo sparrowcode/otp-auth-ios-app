@@ -10,21 +10,23 @@ extension HomeController: SPDiffableTableDelegate, SPDiffableTableMediator {
     }
     
     func diffableTableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForItem item: SPDiffableItem, at indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
         let modelID = item.id
         var actions = UISwipeActionsConfiguration(actions: [])
         if indexPath.section == 0 {
+            
             if !passwordsData.isEmpty {
                 
-                let actionExport = UIContextualAction(style: .normal, title: Texts.Shared.export) { [weak self] action, view, completion in
+                let actionExport = UIContextualAction(style: .normal, title: Texts.Shared.close) { [weak self] action, view, completion in
                     guard let self = self else { return }
                     let link = self.passwordsData[indexPath.row].url
                     let controller = ExportController(link: link.absoluteString)
                     let navigationController = NativeNavigationController(rootViewController: controller)
                     self.present(navigationController, animated: true)
-                    
-                    
                 }
-                actionExport.backgroundColor = .systemYellow
+                
+                actionExport.backgroundColor = .systemIndigo
+                actionExport.image = Images.export
                 
                 let actionDelete = UIContextualAction(style: .destructive, title: Texts.Shared.delete) { [weak self] action, view, completion in
                     guard let self = self else { return }
@@ -46,15 +48,20 @@ extension HomeController: SPDiffableTableDelegate, SPDiffableTableMediator {
                         style: .cancel,
                         handler: nil
                     )
+                    
                     alert.addAction(delete)
                     alert.addAction(cancel)
-                    self.present(alert, animated: true, completion: nil)
                     
+                    self.present(alert, animated: true, completion: nil)
                 }
+                
+                actionDelete.image = Images.delete
+                
                 let codeActions = UISwipeActionsConfiguration(actions: [actionDelete, actionExport])
                 actions = codeActions
             }
         }
+        
         return actions
     }
 }
