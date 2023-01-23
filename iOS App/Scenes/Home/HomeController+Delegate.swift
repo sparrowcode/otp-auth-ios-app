@@ -1,6 +1,7 @@
 import UIKit
 import SPDiffable
 import SPAlert
+import NativeUIKit
 
 extension HomeController: SPDiffableTableDelegate, SPDiffableTableMediator {
     
@@ -13,6 +14,18 @@ extension HomeController: SPDiffableTableDelegate, SPDiffableTableMediator {
         var actions = UISwipeActionsConfiguration(actions: [])
         if indexPath.section == 0 {
             if !passwordsData.isEmpty {
+                
+                let actionExport = UIContextualAction(style: .normal, title: Texts.Shared.export) { [weak self] action, view, completion in
+                    guard let self = self else { return }
+                    let link = self.passwordsData[indexPath.row].url
+                    let controller = ExportController(link: link.absoluteString)
+                    let navigationController = NativeNavigationController(rootViewController: controller)
+                    self.present(navigationController, animated: true)
+                    
+                    
+                }
+                actionExport.backgroundColor = .systemYellow
+                
                 let actionDelete = UIContextualAction(style: .destructive, title: Texts.Shared.delete) { [weak self] action, view, completion in
                     guard let self = self else { return }
                     
@@ -38,8 +51,8 @@ extension HomeController: SPDiffableTableDelegate, SPDiffableTableMediator {
                     self.present(alert, animated: true, completion: nil)
                     
                 }
-                let actionDel = UISwipeActionsConfiguration(actions: [actionDelete])
-                actions = actionDel
+                let codeActions = UISwipeActionsConfiguration(actions: [actionDelete, actionExport])
+                actions = codeActions
             }
         }
         return actions
