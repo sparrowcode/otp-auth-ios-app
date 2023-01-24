@@ -16,7 +16,7 @@ extension HomeController: SPDiffableTableDelegate, SPDiffableTableMediator {
             
             if !passwordsData.isEmpty {
                 
-                let actionExport = UIContextualAction(style: .normal, title: Texts.Shared.close) { [weak self] action, view, completion in
+                let actionExport = UIContextualAction(style: .normal, title: Texts.Shared.export) { [weak self] action, view, completion in
                     guard let self = self else { return }
                     let link = self.passwordsData[indexPath.row].url
                     let controller = ExportController(link: link.absoluteString)
