@@ -23,7 +23,7 @@ class ExportController: SPScrollController {
     let closeButton = NativeLargeActionButton().do {
         $0.set(
             title: Texts.Shared.close,
-            icon: Images.export,
+            icon: Images.close,
             colorise: .init(content: .tint, background: .clear)
         )
     }
