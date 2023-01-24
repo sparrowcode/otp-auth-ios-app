@@ -29,6 +29,15 @@
 "auth login description" = "App Login-Bestätigung";
 
 /* No comment provided by engineer. */
+"export controller description" = "Scannen Sie den QR-Code von einem anderen Gerät aus, um Ihr Konto auf die neue App zu übertragen.";
+
+/* No comment provided by engineer. */
+"export controller footer" = "Klicken Sie auf den QR-Code, um den Link zu kopieren.";
+
+/* No comment provided by engineer. */
+"export controller title" = "Konto exportieren";
+
+/* No comment provided by engineer. */
 "permissions camera denied alert action" = "Einstellungen öffnen";
 
 /* No comment provided by engineer. */
@@ -299,6 +308,9 @@
 "shared cancel" = "Abbrechen";
 
 /* No comment provided by engineer. */
+"shared close" = "Schließen Sie";
+
+/* No comment provided by engineer. */
 "shared copied" = "Kopiert";
 
 /* No comment provided by engineer. */
@@ -309,6 +321,9 @@
 
 /* No comment provided by engineer. */
 "shared error" = "Fehler";
+
+/* No comment provided by engineer. */
+"shared export" = "Exportieren";
 
 /* No comment provided by engineer. */
 "shared ok" = "OK";

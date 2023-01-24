@@ -29,6 +29,15 @@
 "auth login description" = "Подтверждение входа в приложение";
 
 /* No comment provided by engineer. */
+"export controller description" = "Отсканируйте QR-код с другого устройства, чтобы перенести аккаунт в новое приложение.";
+
+/* No comment provided by engineer. */
+"export controller footer" = "Нажмите на QR-код, чтобы скопировать ссылку.";
+
+/* No comment provided by engineer. */
+"export controller title" = "Перенос Аккаунта";
+
+/* No comment provided by engineer. */
 "permissions camera denied alert action" = "Открыть настройки";
 
 /* No comment provided by engineer. */
@@ -299,6 +308,9 @@
 "shared cancel" = "Отмена";
 
 /* No comment provided by engineer. */
+"shared close" = "Закрыть";
+
+/* No comment provided by engineer. */
 "shared copied" = "Скопировано";
 
 /* No comment provided by engineer. */
@@ -309,6 +321,9 @@
 
 /* No comment provided by engineer. */
 "shared error" = "Ошибка";
+
+/* No comment provided by engineer. */
+"shared export" = "Перенести";
 
 /* No comment provided by engineer. */
 "shared ok" = "OK";

@@ -3,7 +3,10 @@ import SafeSFSymbols
 
 enum Images {
     static var copy: UIImage { .system("doc.on.doc.fill", font: UIFont.systemFont(ofSize: 19, weight: .medium)) }
+    static var close: UIImage { .system("checkmark.circle.fill", font: UIFont.systemFont(ofSize: 19, weight: .medium)) }
     static var scan: UIImage { .system("qrcode.viewfinder", font: UIFont.systemFont(ofSize: 19, weight: .medium)) }
+    static var delete: UIImage { .system("trash.fill", font: UIFont.systemFont(ofSize: 19, weight: .medium)) }
+    static var export: UIImage { .system("square.and.arrow.up.fill", font: UIFont.systemFont(ofSize: 19, weight: .medium)) }
     static var settings: UIImage { .generateSettingsIcon("gear", backgroundColor: .tint) ?? UIImage() }
     
     static var appeareance: UIImage { .generateSettingsIcon("lightbulb.fill", backgroundColor: .systemIndigo) ?? UIImage() }

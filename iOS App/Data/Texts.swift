@@ -6,10 +6,12 @@ enum Texts {
         
         static var added: String { NSLocalizedString("shared added", comment: "") }
         static var cancel: String { NSLocalizedString("shared cancel", comment: "") }
+        static var close: String { NSLocalizedString("shared close", comment: "") }
         static var copied: String { NSLocalizedString("shared copied", comment: "") }
         static var delete: String { NSLocalizedString("shared delete", comment: "") }
         static var deleted: String { NSLocalizedString("shared deleted", comment: "") }
         static var error: String { NSLocalizedString("shared error", comment: "") }
+        static var export: String { NSLocalizedString("shared export", comment: "") }
         static var OK: String { NSLocalizedString("shared ok", comment: "") }
         static var unknown: String { NSLocalizedString("shared unknown", comment: "") }
         static var try_again: String { NSLocalizedString("shared try again", comment: "") }
@@ -101,6 +103,14 @@ enum Texts {
         static var delete_alert_message: String { NSLocalizedString("settings controller delete alert message", comment: "") }
     }
     
+    enum ExportController {
+
+        static var title: String { NSLocalizedString("export controller title", comment: "") }
+        static var description: String { NSLocalizedString("export controller description", comment: "") }
+        
+        static var footer: String { NSLocalizedString("export controller footer", comment: "") }
+    }
+    
     enum ScanController {
         
         static var title: String { NSLocalizedString("scan controller title", comment: "") }
@@ -113,7 +123,6 @@ enum Texts {
         
         static var google_import_feature_title: String { NSLocalizedString("scan controller google import feature title", comment: "") }
         static var google_import_feature_description: String { NSLocalizedString("scan controller google import feature description", comment: "") }
-        
     }
     
     enum SettingsController {

@@ -29,6 +29,15 @@
 "auth login description" = "Підтвердження входу в додаток";
 
 /* No comment provided by engineer. */
+"export controller description" = "Відскануйте QR-код з іншого пристрою, щоб перенести обліковий запис до нової програми.";
+
+/* No comment provided by engineer. */
+"export controller footer" = "Натисніть QR-код, щоб скопіювати посилання.";
+
+/* No comment provided by engineer. */
+"export controller title" = "Перенесення Аккаунту";
+
+/* No comment provided by engineer. */
 "permissions camera denied alert action" = "Відкрити настройки";
 
 /* No comment provided by engineer. */
@@ -299,6 +308,9 @@
 "shared cancel" = "Скасувати";
 
 /* No comment provided by engineer. */
+"shared close" = "Закрити";
+
+/* No comment provided by engineer. */
 "shared copied" = "Скопійовано";
 
 /* No comment provided by engineer. */
@@ -309,6 +321,9 @@
 
 /* No comment provided by engineer. */
 "shared error" = "Помилка";
+
+/* No comment provided by engineer. */
+"shared export" = "Перенести";
 
 /* No comment provided by engineer. */
 "shared ok" = "ДОБРЕ";

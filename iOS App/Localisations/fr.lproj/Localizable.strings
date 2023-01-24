@@ -29,6 +29,15 @@
 "auth login description" = "Confirmation de la connexion à l'application";
 
 /* No comment provided by engineer. */
+"export controller description" = "Scannez le code QR depuis un autre appareil pour transférer votre compte vers la nouvelle application.";
+
+/* No comment provided by engineer. */
+"export controller footer" = "Cliquez sur le code QR pour copier le lien.";
+
+/* No comment provided by engineer. */
+"export controller title" = "Compte d'exportation";
+
+/* No comment provided by engineer. */
 "permissions camera denied alert action" = "Ouvrir les paramètres";
 
 /* No comment provided by engineer. */
@@ -299,6 +308,9 @@
 "shared cancel" = "Annuler";
 
 /* No comment provided by engineer. */
+"shared close" = "Fermer";
+
+/* No comment provided by engineer. */
 "shared copied" = "Copié";
 
 /* No comment provided by engineer. */
@@ -309,6 +321,9 @@
 
 /* No comment provided by engineer. */
 "shared error" = "Erreur";
+
+/* No comment provided by engineer. */
+"shared export" = "Exportation";
 
 /* No comment provided by engineer. */
 "shared ok" = "OK";
