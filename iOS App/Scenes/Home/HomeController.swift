@@ -179,7 +179,7 @@ class HomeController: SPDiffableTableController {
             accountsSection.items.append(
                 NativeEmptyRowItem.init(
                     id: "empty cell",
-                    verticalMargins: .medium,
+                    verticalMargins: .large,
                     text: Texts.HomeController.empty_cell_title,
                     detail: Texts.HomeController.empty_cell_subitle)
             )

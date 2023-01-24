@@ -35,7 +35,7 @@ class ExportController: SPScrollController {
         self.copyLink = link
         super.init()
         let image = generateQRCode(from: link)
-        exportButton.QRImageView.image = image
+        exportButton.qrImageView.image = image
     }
     
     required init?(coder: NSCoder) {
