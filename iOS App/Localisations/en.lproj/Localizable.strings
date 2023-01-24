@@ -323,7 +323,7 @@
 "shared error" = "Error";
 
 /* No comment provided by engineer. */
-"shared export" = "Export";
+"shared export" = "Show QR code";
 
 /* No comment provided by engineer. */
 "shared ok" = "OK";
