@@ -12,7 +12,6 @@ extension HomeController: SPDiffableTableDelegate, SPDiffableTableMediator {
     func diffableTableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForItem item: SPDiffableItem, at indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let modelID = item.id
-        var actions = UISwipeActionsConfiguration(actions: [])
         if indexPath.section == 0 {
             
             if !passwordsData.isEmpty {
@@ -23,6 +22,7 @@ extension HomeController: SPDiffableTableDelegate, SPDiffableTableMediator {
                     let controller = ExportController(link: link.absoluteString)
                     let navigationController = NativeNavigationController(rootViewController: controller)
                     self.present(navigationController, animated: true)
+                    completion(true)
                 }
                 
                 actionExport.backgroundColor = .systemIndigo
@@ -53,15 +53,15 @@ extension HomeController: SPDiffableTableDelegate, SPDiffableTableMediator {
                     alert.addAction(cancel)
                     
                     self.present(alert, animated: true, completion: nil)
+                    completion(true)
                 }
                 
                 actionDelete.image = Images.delete
                 
-                let codeActions = UISwipeActionsConfiguration(actions: [actionDelete, actionExport])
-                actions = codeActions
+                return UISwipeActionsConfiguration(actions: [actionDelete, actionExport])
             }
         }
         
-        return actions
+        return nil
     }
 }
