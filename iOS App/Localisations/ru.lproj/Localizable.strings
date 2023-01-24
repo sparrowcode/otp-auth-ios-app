@@ -323,7 +323,7 @@
 "shared error" = "Ошибка";
 
 /* No comment provided by engineer. */
-"shared export" = "Перенести";
+"shared export" = "Показать QR-код";
 
 /* No comment provided by engineer. */
 "shared ok" = "OK";
