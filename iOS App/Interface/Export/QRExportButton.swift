@@ -30,8 +30,6 @@ class QRExportButton: SPButton {
     
     // MARK: - Layout
     
-    #warning("Scale not work")
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         guard transform == .identity else { return }

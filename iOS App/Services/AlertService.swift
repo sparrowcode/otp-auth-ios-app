@@ -44,7 +44,7 @@ enum AlertService {
         SPAlert.present(
             title: Texts.Shared.error,
             message: Texts.Alerts.token_exists,
-            preset: .error
+            preset: .custom(Images.already_added_code)
         )
         SoundsService.play(sound: .error)
     }

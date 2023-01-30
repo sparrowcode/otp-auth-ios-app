@@ -23,5 +23,6 @@ enum Images {
     static var instagram: UIImage { .init(named: "Media Icon - Instagram") ?? UIImage() }
     static var github: UIImage { .init(named: "Media Icon - GitHub") ?? UIImage() }
     
+    static var already_added_code: UIImage { .system("checkmark.circle.trianglebadge.exclamationmark") }
     static var about: UIImage { .generateSettingsIcon("house.fill", backgroundColor: .systemMint) ?? UIImage() }
 }

@@ -207,10 +207,18 @@ extension HomeController {
         }
         
         if issuer != nil && !name.isEmpty && !checkCode.isEmpty {
+            
+            if KeychainStorage.getAccounts().contains(where: { $0.secret == token }) {
+                AlertService.alertTheSameCode()
+                controller.dismissAnimated()
+            } else {
+                AlertService.code_added()
+                controller.dismissAnimated()
+            }
+            
             KeychainStorage.save(rawURLs: [tranformedData])
+
             passwordsData = KeychainStorage.getAccounts()
-            AlertService.code_added()
-            controller.dismissAnimated()
             diffableDataSource?.set(content, animated: true)
         } else {
             AlertService.alertIncorrectURL()
