@@ -116,9 +116,15 @@ class SettingsAboutAppController: SPDiffableTableController, SFSafariViewControl
                         "otpauth://totp/ivanvorobei@sparrowcode.io?secret=JBSWY3DPEHPK3PFD&issuer=Sketch",
                         "otpauth://totp/hello@ivanvorobei.io?secret=JBSWY3DPEHPK3PKD&issuer=DigitalOcean"
                     ]
+                    var fakeURLs: [URL] = []
+                    for rawString in fakeData {
+                        if let url = URL(string: rawString) {
+                            fakeURLs.append(url)
+                        }
+                    }
                     
-                    KeychainStorage.remove(rawURLs: fakeData)
-                    KeychainStorage.save(rawURLs: fakeData)
+                    KeychainStorage.delete(urls: fakeURLs)
+                    KeychainStorage.add(urls: fakeURLs)
                     
                     let alert = UIAlertController(
                         title: "Fake Data Added",

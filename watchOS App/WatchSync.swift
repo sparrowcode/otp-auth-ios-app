@@ -37,25 +37,26 @@ class WatchSync: NSObject, WCSessionDelegate {
         let context = WatchSync.getApplicationContext()
         let json = JSON(context)
         print("current is \(json)")
-        var newURLs: [String] = []
+        var newURLs: [URL] = []
         for value in json["accounts"].arrayValue {
-            if let string = value.string, let _ = URL(string: string) {
-                newURLs.append(string)
+            if let string = value.string, let newurl = URL(string: string) {
+                newURLs.append(newurl)
             }
         }
         
         // 1. Clean old values if it now present already
-        let storageURLs = KeychainStorage.getRawURLs()
-        var urlsToDelete: [String] = []
-        for url in storageURLs {
+        let actualAccounts = KeychainStorage.getAccounts()
+        let actualUrls = actualAccounts.map({ $0.url })
+        var urlsToDelete: [URL] = []
+        for url in actualUrls {
             if !newURLs.contains(url) {
                 urlsToDelete.append(url)
             }
         }
-        KeychainStorage.remove(rawURLs: urlsToDelete)
+        KeychainStorage.delete(urls: urlsToDelete)
         
         // 2. Adding new data
-        KeychainStorage.save(rawURLs: newURLs)
+        KeychainStorage.add(urls: newURLs)
         
         // 3. Both action trigger notification and update observable properties.
     }

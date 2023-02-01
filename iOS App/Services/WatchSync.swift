@@ -16,7 +16,7 @@ class WatchSync: NSObject, WCSessionDelegate {
     static func updateContext() {
         guard WCSession.default.activationState == .activated else { return }
         var context: [String : Any] = [:]
-        context["accounts"] = KeychainStorage.getRawURLs()
+        context["accounts"] = KeychainStorage.getAccounts().map({ $0.url.absoluteString })
         print("WatchSync: \(#function)")
         do {
             try WCSession.default.updateApplicationContext(context)

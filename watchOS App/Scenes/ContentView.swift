@@ -39,8 +39,8 @@ struct ContentView: View {
                                         toDeleteAccounts.append(account)
                                     }
                                 }
-                                KeychainStorage.remove(
-                                    rawURLs: toDeleteAccounts.map({ $0.url.absoluteString }),
+                                KeychainStorage.delete(
+                                    urls: toDeleteAccounts.map({ $0.url }),
                                     with: Constants.WatchKeychain.service
                                 )
                             }

@@ -60,8 +60,9 @@ struct SettingsView: View {
                 }
                 .alert(Texts.Watch.settings_clean_local_accounts_confirm_title, isPresented: $showCleanKeychainAlert, actions: {
                     Button(Texts.Watch.settings_clean_local_accounts_action, role: .destructive, action: {
-                        let urls = KeychainStorage.getRawURLs(with: Constants.WatchKeychain.service)
-                        KeychainStorage.remove(rawURLs: urls, with: Constants.WatchKeychain.service)
+                        let keychain = Constants.WatchKeychain.service
+                        let urls = KeychainStorage.getAccounts(with: keychain).map({ $0.url })
+                        KeychainStorage.delete(urls: urls, with: keychain)
                         showCleanKeychainAlert = false
                     })
                     Button(Texts.Shared.cancel, role: .cancel, action: {

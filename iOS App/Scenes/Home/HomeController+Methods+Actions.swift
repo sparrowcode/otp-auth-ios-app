@@ -139,7 +139,9 @@ extension HomeController {
                 self.dismiss(animated: true)
                 return
             }
-            KeychainStorage.save(rawURLs: [account.getLink()])
+            if let url = URL(string: account.getLink()) {
+                KeychainStorage.add(urls: [url])
+            }
         }
         AlertService.code_added()
         controller.dismissAnimated()
@@ -216,7 +218,7 @@ extension HomeController {
                 controller.dismissAnimated()
             }
             
-            KeychainStorage.save(rawURLs: [tranformedData])
+            KeychainStorage.add(urls: [url])
 
             passwordsData = KeychainStorage.getAccounts()
             diffableDataSource?.set(content, animated: true)

@@ -39,9 +39,11 @@ extension HomeController: SPDiffableTableDelegate, SPDiffableTableMediator {
                     let delete = UIAlertAction(
                         title: Texts.Shared.delete,
                         style: .destructive) { alert in
-                            self.passwordsData.remove(at: indexPath.row)
-                            KeychainStorage.remove(rawURLs: [modelID])
-                            AlertService.code_deleted()
+                            if let url = URL(string: modelID) {
+                                self.passwordsData.remove(at: indexPath.row)
+                                KeychainStorage.delete(urls: [url])
+                                AlertService.code_deleted()
+                            }
                         }
                     let cancel = UIAlertAction(
                         title: Texts.Shared.cancel,

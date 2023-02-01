@@ -4,6 +4,7 @@ import PackageDescription
 
 let otpProduct: Target.Dependency = .product(name: "OTP", package: "OTP")
 let swiftBoostProduct: Target.Dependency = .product(name: "SwiftBoost", package: "SwiftBoost")
+let swiftyJSONProduct: Target.Dependency = .product(name: "SwiftyJSON", package: "SwiftyJSON")
 let keychainAccessProduct: Target.Dependency = .product(name: "KeychainAccess", package: "KeychainAccess")
 
 let package = Package(
@@ -46,6 +47,7 @@ let package = Package(
         .target(
             name: "iOSAppImport",
             dependencies: [
+                swiftyJSONProduct,
                 .product(name: "FirebaseMessaging", package: "Firebase"),
                 .product(name: "FirebaseCrashlytics", package: "Firebase"),
                 .product(name: "FirebasePerformance", package: "Firebase"),
@@ -66,6 +68,7 @@ let package = Package(
         .target(
             name: "widgetExtensionImport",
             dependencies: [
+                swiftyJSONProduct,
                 swiftBoostProduct,
                 keychainAccessProduct,
                 otpProduct
@@ -74,7 +77,7 @@ let package = Package(
         .target(
             name: "watchOSAppImport",
             dependencies: [
-                .product(name: "SwiftyJSON", package: "SwiftyJSON"),
+                swiftyJSONProduct,
                 swiftBoostProduct,
                 keychainAccessProduct,
                 otpProduct

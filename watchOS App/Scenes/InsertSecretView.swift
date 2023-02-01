@@ -35,7 +35,11 @@ struct InsertSecretView: View {
                     Text(Texts.Watch.insert_secret_description)
                     VStack(spacing: 6) {
                         Button(action: {
-                            KeychainStorage.save(rawURLs: [self.insertedText], with: Constants.WatchKeychain.service)
+                            guard let url = URL(string: self.insertedText) else { return }
+                            KeychainStorage.add(
+                                urls: [url],
+                                with: Constants.WatchKeychain.service
+                            )
                             presentationMode.wrappedValue.dismiss()
                         }, label: {
                             HStack {
