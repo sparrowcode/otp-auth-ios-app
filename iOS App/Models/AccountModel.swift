@@ -26,8 +26,9 @@ class AccountModel: NSObject, Codable {
     }
     
     var url: URL {
-        let string = "otpauth://totp/\(login)?secret=\(secret)&issuer=\(issuer)"
-        return URL(string: string)!
+        let rawString = "otpauth://totp/\(login)?secret=\(secret)&issuer=\(issuer)"
+        let urlString = rawString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        return URL(string: urlString)!
     }
     
     func getCode(for date: Date) -> String? {
