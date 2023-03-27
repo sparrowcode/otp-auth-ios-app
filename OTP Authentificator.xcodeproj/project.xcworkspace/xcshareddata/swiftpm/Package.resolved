@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/firebase/firebase-ios-sdk",
         "state": {
           "branch": null,
-          "revision": "0df86ea17d5d281415be74f2290df8431644f156",
-          "version": "10.4.0"
+          "revision": "76de51f0e2be35ecb6ce05ed1ad0a73669b05a11",
+          "version": "10.7.0"
         }
       },
       {
@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/google/GoogleAppMeasurement.git",
         "state": {
           "branch": null,
-          "revision": "9a09ece724128e8d1e14c5133b87c0e236844ac0",
-          "version": "10.4.0"
+          "revision": "04351180d4c757c6c16127cb57b685fff9ef260b",
+          "version": "10.6.0"
         }
       },
       {
@@ -141,8 +141,8 @@
         "repositoryURL": "https://github.com/google/promises.git",
         "state": {
           "branch": null,
-          "revision": "3e4e743631e86c8c70dbc6efdc7beaa6e90fd3bb",
-          "version": "2.1.1"
+          "revision": "ec957ccddbcc710ccc64c9dcbd4c7006fcf8b73a",
+          "version": "2.2.0"
         }
       },
       {
@@ -240,8 +240,8 @@
         "repositoryURL": "https://github.com/sparrowcode/SwiftBoost",
         "state": {
           "branch": null,
-          "revision": "f857c9e6ec6e20b06856f4519ad7b839e2946bc1",
-          "version": "4.0.0"
+          "revision": "e98030f694861986821d5f4dce1a0c9273924858",
+          "version": "4.0.2"
         }
       },
       {
