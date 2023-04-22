@@ -101,54 +101,94 @@ class SettingsController: SPDiffableTableController, MFMailComposeViewController
         )
         sections.append(appSection)
         
-        let mediaSection = SPDiffableSection(
-            id: Section.media.id,
-            header: SPDiffableTextHeaderFooter(text: Texts.SettingsController.media_section_header),
-            footer: SPDiffableTextHeaderFooter(text: Texts.SettingsController.media_section_footer),
-            items: [
-                NativeDiffableLeftButton(
-                    id: Item.website.id,
-                    text: Texts.SettingsController.website_button,
-                    detail: nil,
-                    icon: Images.website,
-                    accessoryType: .disclosureIndicator,
-                    action: { item, indexPath in
-                        self.openUrl(urlStr: Constants.Media.website)
-                    }
-                ),
-                NativeDiffableLeftButton(
-                    id: Item.telegram.id,
-                    text: Texts.SettingsController.telegram_button,
-                    detail: nil,
-                    icon: Images.telegram,
-                    accessoryType: .disclosureIndicator,
-                    action: { item, indexPath in
-                        self.openUrl(urlStr: Constants.Media.telegram)
-                    }
-                ),
-                NativeDiffableLeftButton(
-                    id: Item.twitter.id,
-                    text: Texts.SettingsController.twitter_button,
-                    detail: nil,
-                    icon: Images.twitter,
-                    accessoryType: .disclosureIndicator,
-                    action: { item, indexPath in
-                        self.openUrl(urlStr: Constants.Media.twitter)
-                    }
-                ),
-                NativeDiffableLeftButton(
-                    id: Item.instagram.id,
-                    text: Texts.SettingsController.instagram_button,
-                    detail: nil,
-                    icon: Images.instagram,
-                    accessoryType: .disclosureIndicator,
-                    action: { item, indexPath in
-                        self.openUrl(urlStr: Constants.Media.instagram)
-                    }
-                )
-            ]
-        )
+        
         if Locale.current.languageCode == "ru" || Locale.current.languageCode == "uk" || Locale.current.languageCode == "be" || Locale.current.languageCode == "kk" {
+            let mediaSection = SPDiffableSection(
+                id: Section.media.id,
+                header: SPDiffableTextHeaderFooter(text: Texts.SettingsController.media_section_header),
+                footer: SPDiffableTextHeaderFooter(text: Texts.SettingsController.media_section_footer),
+                items: [
+                    NativeDiffableLeftButton(
+                        id: Item.website.id,
+                        text: Texts.SettingsController.website_button,
+                        detail: nil,
+                        icon: Images.website,
+                        accessoryType: .disclosureIndicator,
+                        action: { item, indexPath in
+                            self.openUrl(urlStr: Constants.Media.website_ru)
+                        }
+                    ),
+                    NativeDiffableLeftButton(
+                        id: Item.telegram.id,
+                        text: Texts.SettingsController.telegram_button,
+                        detail: nil,
+                        icon: Images.telegram,
+                        accessoryType: .disclosureIndicator,
+                        action: { item, indexPath in
+                            self.openUrl(urlStr: Constants.Media.telegram_ru)
+                        }
+                    ),
+                    NativeDiffableLeftButton(
+                        id: Item.twitter.id,
+                        text: Texts.SettingsController.twitter_button,
+                        detail: nil,
+                        icon: Images.twitter,
+                        accessoryType: .disclosureIndicator,
+                        action: { item, indexPath in
+                            self.openUrl(urlStr: Constants.Media.twitter_ru)
+                        }
+                    ),
+                    NativeDiffableLeftButton(
+                        id: Item.instagram.id,
+                        text: Texts.SettingsController.instagram_button,
+                        detail: nil,
+                        icon: Images.instagram,
+                        accessoryType: .disclosureIndicator,
+                        action: { item, indexPath in
+                            self.openUrl(urlStr: Constants.Media.instagram)
+                        }
+                    )
+                ]
+            )
+            sections.append(mediaSection)
+        } else {
+            let mediaSection = SPDiffableSection(
+                id: Section.media.id,
+                header: SPDiffableTextHeaderFooter(text: Texts.SettingsController.media_section_header),
+                footer: SPDiffableTextHeaderFooter(text: Texts.SettingsController.media_section_footer),
+                items: [
+                    NativeDiffableLeftButton(
+                        id: Item.website.id,
+                        text: Texts.SettingsController.website_button,
+                        detail: nil,
+                        icon: Images.website,
+                        accessoryType: .disclosureIndicator,
+                        action: { item, indexPath in
+                            self.openUrl(urlStr: Constants.Media.website_en)
+                        }
+                    ),
+                    NativeDiffableLeftButton(
+                        id: Item.telegram.id,
+                        text: Texts.SettingsController.telegram_button,
+                        detail: nil,
+                        icon: Images.telegram,
+                        accessoryType: .disclosureIndicator,
+                        action: { item, indexPath in
+                            self.openUrl(urlStr: Constants.Media.telegram_en)
+                        }
+                    ),
+                    NativeDiffableLeftButton(
+                        id: Item.twitter.id,
+                        text: Texts.SettingsController.twitter_button,
+                        detail: nil,
+                        icon: Images.twitter,
+                        accessoryType: .disclosureIndicator,
+                        action: { item, indexPath in
+                            self.openUrl(urlStr: Constants.Media.twitter_en)
+                        }
+                    )
+                ]
+            )
             sections.append(mediaSection)
         }
         
