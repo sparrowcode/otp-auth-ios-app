@@ -40,7 +40,13 @@ class OTPTableViewCell: SPTableViewCell {
     func updateCell(model: AccountModel) {
         loginLabel.text = model.login
         websiteLabel.text = model.issuer
-        codeView.setup(code: model.getCode(for: .now) ?? "XXXXXX")
+        if let code = model.getCode(for: .now) {
+            codeView.setup(code: code)
+            password = code
+        } else {
+            codeView.setup(code: "XXXXXX")
+            password = nil
+        }
     }
     
     // MARK: - Layout

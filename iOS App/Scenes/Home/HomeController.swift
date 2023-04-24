@@ -148,13 +148,7 @@ class HomeController: SPDiffableTableController {
                 let item = SPDiffableWrapperItem(
                     id: "\(model.url)",
                     model: model) { item, indexPath in
-                        AlertService.copied()
-                        guard let cell = self.tableView.cellForRow(at: indexPath) as? OTPTableViewCell else { return }
-                        cell.copyButton.isHighlighted = true
-                        UIPasteboard.general.string = cell.password
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                            cell.copyButton.isHighlighted = false
-                        }
+                        self.didTap(indexPath: indexPath)
                     }
                 accountsSection.items.append(item)
             }
@@ -163,13 +157,7 @@ class HomeController: SPDiffableTableController {
                 let item = SPDiffableWrapperItem(
                     id: "\(model.url)",
                     model: model) { item, indexPath in
-                        AlertService.copied()
-                        guard let cell = self.tableView.cellForRow(at: indexPath) as? OTPTableViewCell else { return }
-                        cell.copyButton.isHighlighted = true
-                        UIPasteboard.general.string = cell.password
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                            cell.copyButton.isHighlighted = false
-                        }
+                        self.didTap(indexPath: indexPath)
                     }
                 accountsSection.items.append(item)
             }
@@ -209,6 +197,19 @@ class HomeController: SPDiffableTableController {
         sections.append(settingsSection)
         
         return sections
+    }
+    
+    private func didTap(indexPath: IndexPath) {
+        guard let cell = self.tableView.cellForRow(at: indexPath) as? OTPTableViewCell else { return }
+        cell.copyButton.isHighlighted = true
+        if let code = cell.password {
+            debug("Copied code \(code)")
+            UIPasteboard.general.string = cell.password
+            AlertService.copied()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                cell.copyButton.isHighlighted = false
+            }
+        }
     }
     
     enum Section: String {

@@ -36,6 +36,8 @@ class AppDelegate: SPAppWindowDelegate {
             UIPasteboard.general.string = code
             processCopyOTPCode = nil
         }
+        
+        NotificationCenter.default.post(name: .changedAccounts)
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
