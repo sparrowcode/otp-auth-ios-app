@@ -11,7 +11,7 @@ class SettingsSoundsController: SPDiffableTableController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
-        navigationItem.title = Texts.SettingsController.title
+        navigationItem.title = Texts.SettingsController.Sounds.title
         configureDiffable(sections: content, cellProviders: SPDiffableTableDataSource.CellProvider.default)
         tableView.cellLayoutMarginsFollowReadableWidth = true
     }

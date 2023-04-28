@@ -103,6 +103,7 @@ extension HomeController {
     private func scaning() {
         QRCode.scanning(
             detect: { [self] data, controller in
+                print(data.debugDescription)
                 let tranformedData = self.cutSymbols(model: data!)
                 if !scannedData.contains(tranformedData) {
                     scannedData.append(tranformedData)
@@ -134,7 +135,7 @@ extension HomeController {
     func handledGoogleParser(tranformedData: String, url: URL, dataQR: QRCodeData, controller: ScanController) {
         let accounts = GAuthSwiftParser.getAccounts(code: tranformedData)
         for account in accounts {
-            if account.name == "" && account.issuer == "" && account.secret == "" {
+            if account.name == "" || account.issuer == "" || account.secret == "" {
                 AlertService.alertIncorrectURL()
                 self.dismiss(animated: true)
                 return
