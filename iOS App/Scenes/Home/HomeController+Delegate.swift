@@ -6,17 +6,15 @@ import NativeUIKit
 extension HomeController: SPDiffableTableDelegate, SPDiffableTableMediator {
     
     func diffableTableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        if indexPath.section == 0 && !passwordsData.isEmpty {
-            return true
-        }
-        return false
+        guard let item = diffableDataSource?.getItem(indexPath: indexPath) as? SPDiffableWrapperItem else { return false }
+        let accountModel = item.model as? AccountModel
+        return (accountModel == nil) ? false : true
     }
     
     func diffableTableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForItem item: SPDiffableItem, at indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        if indexPath.section == 0 && !passwordsData.isEmpty {
-            return nil
-        }
+        guard let item = diffableDataSource?.getItem(indexPath: indexPath) as? SPDiffableWrapperItem else { return nil }
+        guard let _ = item.model as? AccountModel else { return nil }
         
         let modelID = item.id
         let actionExport = UIContextualAction(style: .normal, title: Texts.Shared.export) { [weak self] action, view, completion in
