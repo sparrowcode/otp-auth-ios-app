@@ -37,6 +37,8 @@ extension HomeController: SPDiffableTableDelegate, SPDiffableTableMediator {
                 message: Texts.HomeController.delete_alert_message,
                 preferredStyle: .actionSheet
             )
+            alert.popoverPresentationController?.sourceView = tableView.cellForRow(at: indexPath)
+            alert.popoverPresentationController?.sourceRect = tableView.cellForRow(at: indexPath)?.bounds ?? .zero
             let delete = UIAlertAction(
                 title: Texts.Shared.delete,
                 style: .destructive) { alert in
