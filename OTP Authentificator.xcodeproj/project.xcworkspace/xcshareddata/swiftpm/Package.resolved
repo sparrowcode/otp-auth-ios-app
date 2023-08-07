@@ -3,20 +3,20 @@
     "pins": [
       {
         "package": "abseil",
-        "repositoryURL": "https://github.com/firebase/abseil-cpp-SwiftPM.git",
+        "repositoryURL": "https://github.com/google/abseil-cpp-binary.git",
         "state": {
           "branch": null,
-          "revision": "583de9bd60f66b40e78d08599cc92036c2e7e4e1",
-          "version": "0.20220203.2"
+          "revision": "bfc0b6f81adc06ce5121eb23f628473638d67c5c",
+          "version": "1.2022062300.0"
         }
       },
       {
-        "package": "BoringSSL-GRPC",
-        "repositoryURL": "https://github.com/firebase/boringssl-SwiftPM.git",
+        "package": "AlertKit",
+        "repositoryURL": "https://github.com/sparrowcode/AlertKit",
         "state": {
           "branch": null,
-          "revision": "dd3eda2b05a3f459fc3073695ad1b28659066eab",
-          "version": "0.9.1"
+          "revision": "1da133b6f630f4e11d141ce5c05d09b68200278e",
+          "version": "5.0.1"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/firebase/firebase-ios-sdk",
         "state": {
           "branch": null,
-          "revision": "76de51f0e2be35ecb6ce05ed1ad0a73669b05a11",
-          "version": "10.7.0"
+          "revision": "df2171b0c6afb9e9d4f7e07669d558c510b9f6be",
+          "version": "10.13.0"
         }
       },
       {
@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/google/GoogleAppMeasurement.git",
         "state": {
           "branch": null,
-          "revision": "04351180d4c757c6c16127cb57b685fff9ef260b",
-          "version": "10.6.0"
+          "revision": "03b9beee1a61f62d32c521e172e192a1663a5e8b",
+          "version": "10.13.0"
         }
       },
       {
@@ -51,8 +51,8 @@
         "repositoryURL": "https://github.com/google/GoogleDataTransport.git",
         "state": {
           "branch": null,
-          "revision": "f6b558e3f801f2cac336b04f615ce111fa9ddaa0",
-          "version": "9.2.1"
+          "revision": "aae45a320fd0d11811820335b1eabc8753902a40",
+          "version": "9.2.5"
         }
       },
       {
@@ -60,17 +60,17 @@
         "repositoryURL": "https://github.com/google/GoogleUtilities.git",
         "state": {
           "branch": null,
-          "revision": "0543562f85620b5b7c510c6bcbef75b562a5127b",
-          "version": "7.11.0"
+          "revision": "c38ce365d77b04a9a300c31061c5227589e5597b",
+          "version": "7.11.5"
         }
       },
       {
         "package": "gRPC",
-        "repositoryURL": "https://github.com/grpc/grpc-ios.git",
+        "repositoryURL": "https://github.com/google/grpc-binary.git",
         "state": {
           "branch": null,
-          "revision": "8440b914756e0d26d4f4d054a1c1581daedfc5b6",
-          "version": "1.44.3-grpc"
+          "revision": "f1b366129d1125be7db83247e003fc333104b569",
+          "version": "1.50.2"
         }
       },
       {
@@ -78,8 +78,8 @@
         "repositoryURL": "https://github.com/google/gtm-session-fetcher.git",
         "state": {
           "branch": null,
-          "revision": "96d7cc73a71ce950723aa3c50ce4fb275ae180b8",
-          "version": "3.1.0"
+          "revision": "d415594121c9e8a4f9d79cecee0965cf35e74dbd",
+          "version": "3.1.1"
         }
       },
       {
@@ -132,8 +132,8 @@
         "repositoryURL": "https://github.com/sparrowcode/PermissionsKit",
         "state": {
           "branch": null,
-          "revision": "b3b87d4e3afa37cd4ddaf1f1091f37df2cd9d05b",
-          "version": "9.0.2"
+          "revision": "d10e48fb51a49b1a8db2a814ff7f7353415b72a3",
+          "version": "9.0.5"
         }
       },
       {
@@ -141,8 +141,8 @@
         "repositoryURL": "https://github.com/google/promises.git",
         "state": {
           "branch": null,
-          "revision": "ec957ccddbcc710ccc64c9dcbd4c7006fcf8b73a",
-          "version": "2.2.0"
+          "revision": "e70e889c0196c76d22759eb50d6a0270ca9f1d9e",
+          "version": "2.3.1"
         }
       },
       {
@@ -150,17 +150,17 @@
         "repositoryURL": "https://github.com/sparrowcode/SafeSFSymbols",
         "state": {
           "branch": null,
-          "revision": "0909c9b1132fca42aa1609f0dc5399ddb39e3b7b",
-          "version": "1.1.4"
+          "revision": "0fadcb5488f9af7b741b1eb6e0829fe26542beb0",
+          "version": "1.1.5"
         }
       },
       {
-        "package": "SPAlert",
-        "repositoryURL": "https://github.com/ivanvorobei/SPAlert",
+        "package": "SettingsIconGenerator",
+        "repositoryURL": "https://github.com/sparrowcode/SettingsIconGenerator",
         "state": {
           "branch": null,
-          "revision": "5fd3e2923d26f0f0b40f0e6c10fca458a61a73c4",
-          "version": "4.2.0"
+          "revision": "d2070ad86ae7834151f43418eaa57f05380d5aac",
+          "version": "1.0.2"
         }
       },
       {
@@ -186,8 +186,8 @@
         "repositoryURL": "https://github.com/ivanvorobei/SPIndicator",
         "state": {
           "branch": null,
-          "revision": "43600857729d9efff046dc6673e6f94e095882c7",
-          "version": "1.6.4"
+          "revision": "e8a045f91757b32bb29c6feff1644ef79c8daedf",
+          "version": "1.6.5"
         }
       },
       {
@@ -206,15 +206,6 @@
           "branch": null,
           "revision": "0813262760c7388fc821e5068ad31005ac397b9f",
           "version": "1.4.1"
-        }
-      },
-      {
-        "package": "SPSettingsIcons",
-        "repositoryURL": "https://github.com/sparrowcode/SPSettingsIcons",
-        "state": {
-          "branch": null,
-          "revision": "1a2bd5439aabba3474408fbca86eaad344c3fce9",
-          "version": "1.0.1"
         }
       },
       {
@@ -240,8 +231,8 @@
         "repositoryURL": "https://github.com/sparrowcode/SwiftBoost",
         "state": {
           "branch": null,
-          "revision": "e98030f694861986821d5f4dce1a0c9273924858",
-          "version": "4.0.2"
+          "revision": "b3b11904d8859762bddb8d89d2231375783d3fc3",
+          "version": "4.0.3"
         }
       },
       {
@@ -249,8 +240,8 @@
         "repositoryURL": "https://github.com/lachlanbell/SwiftOTP.git",
         "state": {
           "branch": null,
-          "revision": "315acdb759083fd8f3c37b02fc021321c8934f9c",
-          "version": "3.0.0"
+          "revision": "e43757cd3851b77ca7da195b3355c4a6f2991a0e",
+          "version": "3.0.1"
         }
       },
       {

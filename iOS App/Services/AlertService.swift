@@ -1,6 +1,6 @@
 import UIKit
 import SparrowKit
-import SPAlert
+import AlertKit
 import SPIndicator
 
 enum AlertService {
@@ -12,54 +12,32 @@ enum AlertService {
     }
     
     static func code_added() {
-        SPAlert.present(
-            title: Texts.Shared.added,
-            message: Texts.Alerts.code_added,
-            preset: .done,
-            completion: nil
-        )
+        AlertKitAPI.present(title: Texts.Shared.added, subtitle: Texts.Alerts.code_added, icon: .done, style: .iOS17AppleMusic, haptic: .success)
         SoundsService.play(sound: .success)
     }
     
     static func code_deleted() {
-        SPAlert.present(
-            title: Texts.Shared.deleted,
-            message: Texts.Alerts.code_deleted,
-            preset: .done,
-            completion: nil
-        )
+        AlertKitAPI.present(title: Texts.Shared.deleted, subtitle: Texts.Alerts.code_deleted, icon: .done, style: .iOS17AppleMusic, haptic: .success)
         SoundsService.play(sound: .delete)
     }
     
     static func alertNoToken() {
-        SPAlert.present(
-            title: Texts.Shared.error,
-            message: Texts.Alerts.no_token,
-            preset: .error
-        )
+        AlertKitAPI.present(title: Texts.Shared.error, subtitle: Texts.Alerts.no_token, icon: .error, style: .iOS17AppleMusic, haptic: .error)
         SoundsService.play(sound: .error)
     }
     
     static func alertTheSameCode() {
-        SPAlert.present(
-            title: Texts.Shared.error,
-            message: Texts.Alerts.token_exists,
-            preset: .custom(Images.already_added_code)
-        )
+        AlertKitAPI.present(title: Texts.Shared.error, subtitle: Texts.Alerts.token_exists, icon: .custom(Images.already_added_code), style: .iOS17AppleMusic, haptic: .error)
         SoundsService.play(sound: .error)
     }
     
     static func alertIncorrectURL() {
-        SPAlert.present(
-            title: Texts.Shared.error,
-            message: Texts.Alerts.incorrect_url,
-            preset: .error
-        )
+        AlertKitAPI.present(title: Texts.Shared.error, subtitle: Texts.Alerts.incorrect_url, icon: .error, style: .iOS17AppleMusic, haptic: .error)
         SoundsService.play(sound: .error)
     }
     
     static func email_error() {
-        SPAlert.present(message: Texts.Alerts.email_error, haptic: .error)
+        AlertKitAPI.present(title: Texts.Alerts.email_error, subtitle: nil, icon: .error, style: .iOS17AppleMusic, haptic: .error)
         SoundsService.play(sound: .error)
     }
     

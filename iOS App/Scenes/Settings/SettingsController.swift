@@ -2,10 +2,10 @@ import UIKit
 import SparrowKit
 import NativeUIKit
 import SPDiffable
-import SPSettingsIcons
+import SettingsIconGenerator
 import SafariServices
 import MessageUI
-import SPAlert
+import AlertKit
 
 class SettingsController: SPDiffableTableController, MFMailComposeViewControllerDelegate, SFSafariViewControllerDelegate {
     

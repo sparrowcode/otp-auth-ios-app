@@ -2,7 +2,7 @@ import UIKit
 import NativeUIKit
 import PermissionsKit
 import SPDiffable
-import SPAlert
+import AlertKit
 import OTP
 import GAuthSwiftParser
 

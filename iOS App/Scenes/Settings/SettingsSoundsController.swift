@@ -2,7 +2,7 @@ import UIKit
 import SparrowKit
 import NativeUIKit
 import SPDiffable
-import SPSettingsIcons
+import SettingsIconGenerator
 
 class SettingsSoundsController: SPDiffableTableController {
     

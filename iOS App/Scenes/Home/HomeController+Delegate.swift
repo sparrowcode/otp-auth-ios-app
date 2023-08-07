@@ -1,6 +1,6 @@
 import UIKit
 import SPDiffable
-import SPAlert
+import AlertKit
 import NativeUIKit
 
 extension HomeController: SPDiffableTableDelegate, SPDiffableTableMediator {

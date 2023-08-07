@@ -2,7 +2,7 @@ import UIKit
 import SparrowKit
 import NativeUIKit
 import SPDiffable
-import SPSettingsIcons
+import SettingsIconGenerator
 import CameraPermission
 import SPIndicator
 import WidgetKit
