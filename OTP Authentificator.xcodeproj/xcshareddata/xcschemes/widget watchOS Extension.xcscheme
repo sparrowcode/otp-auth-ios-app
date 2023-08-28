@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F4CBBEE1291662DC00FF955E"
-               BuildableName = "Widget watchOS Extension Intent.appex"
-               BlueprintName = "Widget watchOS Extension Intent"
+               BlueprintIdentifier = "F4CBBECA291662D100FF955E"
+               BuildableName = "widget watchOS Extension.appex"
+               BlueprintName = "widget watchOS Extension"
                ReferencedContainer = "container:OTP Authentificator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,6 +42,23 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "_XCWidgetKind"
+            value = ""
+            isEnabled = "NO">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "_XCWidgetDefaultView"
+            value = "timeline"
+            isEnabled = "NO">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "_XCWidgetFamily"
+            value = "medium"
+            isEnabled = "NO">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -54,9 +71,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F4CBBEE1291662DC00FF955E"
-            BuildableName = "Widget watchOS Extension Intent.appex"
-            BlueprintName = "Widget watchOS Extension Intent"
+            BlueprintIdentifier = "F4CBBECA291662D100FF955E"
+            BuildableName = "widget watchOS Extension.appex"
+            BlueprintName = "widget watchOS Extension"
             ReferencedContainer = "container:OTP Authentificator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
