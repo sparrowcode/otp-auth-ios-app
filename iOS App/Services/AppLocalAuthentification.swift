@@ -28,6 +28,8 @@ enum AppLocalAuthentication {
             return "Touch ID"
         case .none:
             return nil
+        case .opticID:
+            return "Optic ID"
         @unknown default:
             return nil
         }
@@ -47,6 +49,9 @@ enum AppLocalAuthentication {
             return "Touch ID"
         case .none:
             return nil
+        case .opticID:
+            guard usingBiometric else { return nil }
+            return "Optic ID"
         @unknown default:
             return nil
         }

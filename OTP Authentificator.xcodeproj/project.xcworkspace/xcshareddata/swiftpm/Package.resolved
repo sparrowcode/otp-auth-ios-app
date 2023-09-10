@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/firebase/firebase-ios-sdk",
         "state": {
           "branch": null,
-          "revision": "df2171b0c6afb9e9d4f7e07669d558c510b9f6be",
-          "version": "10.13.0"
+          "revision": "2bfe6abe1014aafe5cf28401708f7d39f9926a76",
+          "version": "10.14.0"
         }
       },
       {
@@ -80,6 +80,15 @@
           "branch": null,
           "revision": "d415594121c9e8a4f9d79cecee0965cf35e74dbd",
           "version": "3.1.1"
+        }
+      },
+      {
+        "package": "InteropForGoogle",
+        "repositoryURL": "https://github.com/google/interop-ios-for-google-sdks.git",
+        "state": {
+          "branch": null,
+          "revision": "2d12673670417654f08f5f90fdd62926dc3a2648",
+          "version": "100.0.0"
         }
       },
       {
@@ -242,6 +251,15 @@
           "branch": null,
           "revision": "e43757cd3851b77ca7da195b3355c4a6f2991a0e",
           "version": "3.0.1"
+        }
+      },
+      {
+        "package": "SwiftUIExtension",
+        "repositoryURL": "https://github.com/sparrowcode/SwiftUIExtension",
+        "state": {
+          "branch": null,
+          "revision": "e98b1335574038c1e1220079a1a8fa0f02f9cb22",
+          "version": "1.0.4"
         }
       },
       {

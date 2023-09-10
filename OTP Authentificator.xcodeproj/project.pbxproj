@@ -782,9 +782,7 @@
 		F41FE45E28ED677600097440 /* widget Extension */ = {
 			isa = PBXGroup;
 			children = (
-				F423E4BB291AC78000991EBE /* WidgetsBundle.swift */,
-				F423E4C2291AC7D000991EBE /* OTPCode */,
-				F423E4C1291AC7AC00991EBE /* OpenApp */,
+				F43CC4472AAE52F900870A2C /* App */,
 				F438F2DE2915B62D00AD403E /* Resources */,
 				F41FE4AE28ED8C6300097440 /* Localisation */,
 				F41FE4AC28ED8BDB00097440 /* Texts.swift */,
@@ -941,6 +939,16 @@
 				F4CBBEF42916632200FF955E /* watchOS-Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		F43CC4472AAE52F900870A2C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F423E4BB291AC78000991EBE /* WidgetsBundle.swift */,
+				F423E4C2291AC7D000991EBE /* OTPCode */,
+				F423E4C1291AC7AC00991EBE /* OpenApp */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		F4CBBF102916752B00FF955E /* Localisation */ = {

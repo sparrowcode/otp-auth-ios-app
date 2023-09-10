@@ -10,15 +10,12 @@ struct OpenAppEntryView : View {
     
     var body: some View {
         switch family {
-        #if os(iOS)
+#if os(iOS)
         case .systemSmall:
             ZStack {
                 Rectangle()
-                    .foregroundColor(.blue)
-                Rectangle()
                     .foregroundColor(.clear)
                     .addBorder(Color.white, width: 2, cornerRadius: 16)
-                    .padding(12)
                     .cornerRadius(16)
                     .opacity(0.22)
                 VStack(spacing: 4) {
@@ -33,15 +30,20 @@ struct OpenAppEntryView : View {
                 .fontWeight(.semibold)
                 .font(.title)
             }
-        #endif
+            .containerBackgroundForWidget {
+                Color.blue
+            }
+#endif
         case .accessoryCircular:
             ZStack {
-                AccessoryWidgetBackground()
                 Image(systemName: "shield.fill")
                     .resizable()
                     .scaledToFit()
                     .padding(10)
                 
+            }
+            .containerBackgroundForWidget {
+                AccessoryWidgetBackground()
             }
         default:
             Text(Texts.not_supported)
@@ -54,7 +56,7 @@ struct OpenAppEntryView_Preview: PreviewProvider {
     
     static var previews: some View {
         OpenAppEntryView(entry: .get())
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+            .previewContext(WidgetPreviewContext(family: .accessoryCircular))
     }
 }
 #endif
@@ -64,6 +66,6 @@ extension View {
     public func addBorder<S>(_ content: S, width: CGFloat = 1, cornerRadius: CGFloat) -> some View where S : ShapeStyle {
         let roundedRect = RoundedRectangle(cornerRadius: cornerRadius)
         return clipShape(roundedRect)
-             .overlay(roundedRect.strokeBorder(content, lineWidth: width))
+            .overlay(roundedRect.strokeBorder(content, lineWidth: width))
     }
 }
