@@ -1784,7 +1784,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.5.8;
+				MARKETING_VERSION = 2.5.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.sparrowcode.apps.otp-auth.widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1814,7 +1814,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.5.8;
+				MARKETING_VERSION = 2.5.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.sparrowcode.apps.otp-auth.widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1842,7 +1842,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.5.8;
+				MARKETING_VERSION = 2.5.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.sparrowcode.apps.otp-auth.intent";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1870,7 +1870,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.5.8;
+				MARKETING_VERSION = 2.5.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.sparrowcode.apps.otp-auth.intent";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2048,7 +2048,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.5.8;
+				MARKETING_VERSION = 2.5.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.sparrowcode.apps.otp-auth.watch.widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2079,7 +2079,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.5.8;
+				MARKETING_VERSION = 2.5.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.sparrowcode.apps.otp-auth.watch.widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2108,7 +2108,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.5.8;
+				MARKETING_VERSION = 2.5.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.sparrowcode.apps.otp-auth.watch.intent";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2138,7 +2138,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.5.8;
+				MARKETING_VERSION = 2.5.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.sparrowcode.apps.otp-auth.watch.intent";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
