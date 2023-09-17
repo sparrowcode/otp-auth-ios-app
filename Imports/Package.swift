@@ -37,7 +37,7 @@ let package = Package(
         .package(url: "https://github.com/sparrowcode/SafeSFSymbols", .upToNextMajor(from: "1.1.2")),
         .package(url: "https://github.com/sparrowcode/PermissionsKit", .upToNextMajor(from: "9.0.5")),
         .package(url: "https://github.com/sparrowcode/AlertKit", .upToNextMajor(from: "5.0.1")),
-        .package(url: "https://github.com/sparrowcode/SwiftUIExtension", .upToNextMajor(from: "1.0.4")),
+        .package(url: "https://github.com/sparrowcode/SwiftUIExtension", .upToNextMajor(from: "1.0.5")),
         .package(url: "https://github.com/ivanvorobei/SPIndicator", .upToNextMajor(from: "1.6.4")),
         .package(url: "https://github.com/kishikawakatsumi/KeychainAccess", .upToNextMajor(from: "4.2.2")),
         .package(url: "https://github.com/sparrowcode/OTP", .upToNextMajor(from: "1.0.0")),

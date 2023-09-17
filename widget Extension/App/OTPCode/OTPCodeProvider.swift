@@ -34,16 +34,29 @@ struct OTPCodeProvider: IntentTimelineProvider {
     }
     
     func getSnapshot(for configuration: SelectAccountIntent, in context: Context, completion: @escaping (OTPCodeEntry) -> ()) {
-        let entry = Entry(
+        let entries = getEntries(for: configuration)
+        
+        let previewEntry = Entry(
             otpCode: defaultCode,
             issuer: "sparrowcode.io",
             date: .now,
             configuration: configuration
         )
-        completion(entry)
+        
+        if context.isPreview {
+            completion(previewEntry)
+        } else {
+            completion(entries.first ?? previewEntry)
+        }
     }
     
     func getTimeline(for configuration: SelectAccountIntent, in context: Context, completion: @escaping (Timeline<OTPCodeEntry>) -> ()) {
+        let entries = getEntries(for: configuration)
+        let timeline = Timeline(entries: entries, policy: .atEnd)
+        completion(timeline)
+    }
+    
+    private func getEntries(for configuration: SelectAccountIntent) -> [OTPCodeEntry] {
         var entries: [Entry] = []
         let currentDate = Date().start(of: .minute)
         for codeIndex in 0...60 {
@@ -58,8 +71,7 @@ struct OTPCodeProvider: IntentTimelineProvider {
             )
             entries.append(entry)
         }
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
+        return entries
     }
     
     private func getCodeBySecret(secret: String, for date: Date) -> String? {
