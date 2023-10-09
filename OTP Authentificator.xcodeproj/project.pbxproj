@@ -96,8 +96,8 @@
 		F42361722914F99B00313B1E /* iOSAppImport in Frameworks */ = {isa = PBXBuildFile; productRef = F42361712914F99B00313B1E /* iOSAppImport */; };
 		F42361762914FA0400313B1E /* widgetExtensionImport in Frameworks */ = {isa = PBXBuildFile; productRef = F42361752914FA0400313B1E /* widgetExtensionImport */; };
 		F42361782914FA0A00313B1E /* widgetExtensionImport in Frameworks */ = {isa = PBXBuildFile; productRef = F42361772914FA0A00313B1E /* widgetExtensionImport */; };
-		F423E4BC291AC78000991EBE /* WidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F423E4BB291AC78000991EBE /* WidgetsBundle.swift */; };
-		F423E4BD291AC78000991EBE /* WidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F423E4BB291AC78000991EBE /* WidgetsBundle.swift */; };
+		F423E4BC291AC78000991EBE /* OTPWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F423E4BB291AC78000991EBE /* OTPWidgetBundle.swift */; };
+		F423E4BD291AC78000991EBE /* OTPWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F423E4BB291AC78000991EBE /* OTPWidgetBundle.swift */; };
 		F423E4BF291AC7A500991EBE /* OpenAppWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F423E4BE291AC7A500991EBE /* OpenAppWidget.swift */; };
 		F423E4C0291AC7A500991EBE /* OpenAppWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F423E4BE291AC7A500991EBE /* OpenAppWidget.swift */; };
 		F423E4C4291ACA4300991EBE /* OpenAppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F423E4C3291ACA4300991EBE /* OpenAppEntry.swift */; };
@@ -131,6 +131,16 @@
 		F438F2DA2915893900AD403E /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35E712D28270A160039A4C0 /* Texts.swift */; };
 		F465604C2916BFB4007C203C /* widget watchOS Extension Intent.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F4CBBEF2291662DC00FF955E /* widget watchOS Extension Intent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F47CD2FD2865B064006367E9 /* Base32.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47CD2FC2865B064006367E9 /* Base32.swift */; };
+		F492B4402AD3D19A007F4CA9 /* MarkupBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492B43E2AD3D19A007F4CA9 /* MarkupBorderView.swift */; };
+		F492B4412AD3D19A007F4CA9 /* MarkupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492B43F2AD3D19A007F4CA9 /* MarkupView.swift */; };
+		F492B4442AD3D3B6007F4CA9 /* OTPCodeSystemSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492B4432AD3D3B6007F4CA9 /* OTPCodeSystemSmall.swift */; };
+		F492B4462AD3D435007F4CA9 /* OTPCodeAccessoryRectangular.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492B4452AD3D435007F4CA9 /* OTPCodeAccessoryRectangular.swift */; };
+		F492B4482AD3D451007F4CA9 /* OTPCodeAccessoryCircular.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492B4472AD3D451007F4CA9 /* OTPCodeAccessoryCircular.swift */; };
+		F492B44A2AD3D47A007F4CA9 /* OTPCodeAccessoryInline.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492B4492AD3D47A007F4CA9 /* OTPCodeAccessoryInline.swift */; };
+		F492B44B2AD3D5B3007F4CA9 /* OTPCodeSystemSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492B4432AD3D3B6007F4CA9 /* OTPCodeSystemSmall.swift */; };
+		F492B44C2AD3D5C8007F4CA9 /* OTPCodeAccessoryRectangular.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492B4452AD3D435007F4CA9 /* OTPCodeAccessoryRectangular.swift */; };
+		F492B44D2AD3D632007F4CA9 /* OTPCodeAccessoryCircular.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492B4472AD3D451007F4CA9 /* OTPCodeAccessoryCircular.swift */; };
+		F492B44E2AD3D635007F4CA9 /* OTPCodeAccessoryInline.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492B4492AD3D47A007F4CA9 /* OTPCodeAccessoryInline.swift */; };
 		F4CBBECD291662D100FF955E /* OTPCodeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DFA0FD291653B50060C876 /* OTPCodeEntry.swift */; };
 		F4CBBECE291662D100FF955E /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A358DC4D2857F02100BD6F4C /* URLExtension.swift */; };
 		F4CBBECF291662D100FF955E /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41FE4AC28ED8BDB00097440 /* Texts.swift */; };
@@ -350,7 +360,7 @@
 		F41FE4BB28ED8F9300097440 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/WidgetIndents.strings; sourceTree = "<group>"; };
 		F423616B2914F01D00313B1E /* WatchSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSync.swift; sourceTree = "<group>"; };
 		F42361702914F95500313B1E /* Imports */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Imports; sourceTree = "<group>"; };
-		F423E4BB291AC78000991EBE /* WidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetsBundle.swift; sourceTree = "<group>"; };
+		F423E4BB291AC78000991EBE /* OTPWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPWidgetBundle.swift; sourceTree = "<group>"; };
 		F423E4BE291AC7A500991EBE /* OpenAppWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAppWidget.swift; sourceTree = "<group>"; };
 		F423E4C3291ACA4300991EBE /* OpenAppEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAppEntry.swift; sourceTree = "<group>"; };
 		F423E4C6291ACB4000991EBE /* OpenAppEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAppEntryView.swift; sourceTree = "<group>"; };
@@ -380,6 +390,12 @@
 		F438F2DD2915B61200AD403E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/WidgetIndents.strings; sourceTree = "<group>"; };
 		F47CD2FC2865B064006367E9 /* Base32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base32.swift; sourceTree = "<group>"; };
 		F47FDD082859000900499E8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F492B43E2AD3D19A007F4CA9 /* MarkupBorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkupBorderView.swift; sourceTree = "<group>"; };
+		F492B43F2AD3D19A007F4CA9 /* MarkupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkupView.swift; sourceTree = "<group>"; };
+		F492B4432AD3D3B6007F4CA9 /* OTPCodeSystemSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCodeSystemSmall.swift; sourceTree = "<group>"; };
+		F492B4452AD3D435007F4CA9 /* OTPCodeAccessoryRectangular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCodeAccessoryRectangular.swift; sourceTree = "<group>"; };
+		F492B4472AD3D451007F4CA9 /* OTPCodeAccessoryCircular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCodeAccessoryCircular.swift; sourceTree = "<group>"; };
+		F492B4492AD3D47A007F4CA9 /* OTPCodeAccessoryInline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCodeAccessoryInline.swift; sourceTree = "<group>"; };
 		F4A09ED728F6CEEC009C31F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F4A09ED828F6D3B9009C31F0 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F4A09ED928F6D3B9009C31F0 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -784,6 +800,7 @@
 			children = (
 				F43CC4472AAE52F900870A2C /* App */,
 				F438F2DE2915B62D00AD403E /* Resources */,
+				F492B43C2AD3D19A007F4CA9 /* Views */,
 				F41FE4AE28ED8C6300097440 /* Localisation */,
 				F41FE4AC28ED8BDB00097440 /* Texts.swift */,
 			);
@@ -823,6 +840,7 @@
 		F423E4C2291AC7D000991EBE /* OTPCode */ = {
 			isa = PBXGroup;
 			children = (
+				F492B4422AD3D3AC007F4CA9 /* Views */,
 				F41FE45F28ED677600097440 /* OTPCodeWidget.swift */,
 				F41FE4AA28ED871700097440 /* OTPCodeEntryView.swift */,
 				F41FE46E28ED678600097440 /* OTPCodeProvider.swift */,
@@ -944,11 +962,39 @@
 		F43CC4472AAE52F900870A2C /* App */ = {
 			isa = PBXGroup;
 			children = (
-				F423E4BB291AC78000991EBE /* WidgetsBundle.swift */,
+				F423E4BB291AC78000991EBE /* OTPWidgetBundle.swift */,
 				F423E4C2291AC7D000991EBE /* OTPCode */,
 				F423E4C1291AC7AC00991EBE /* OpenApp */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		F492B43C2AD3D19A007F4CA9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F492B43D2AD3D19A007F4CA9 /* Markup */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F492B43D2AD3D19A007F4CA9 /* Markup */ = {
+			isa = PBXGroup;
+			children = (
+				F492B43E2AD3D19A007F4CA9 /* MarkupBorderView.swift */,
+				F492B43F2AD3D19A007F4CA9 /* MarkupView.swift */,
+			);
+			path = Markup;
+			sourceTree = "<group>";
+		};
+		F492B4422AD3D3AC007F4CA9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F492B4432AD3D3B6007F4CA9 /* OTPCodeSystemSmall.swift */,
+				F492B4452AD3D435007F4CA9 /* OTPCodeAccessoryRectangular.swift */,
+				F492B4472AD3D451007F4CA9 /* OTPCodeAccessoryCircular.swift */,
+				F492B4492AD3D47A007F4CA9 /* OTPCodeAccessoryInline.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F4CBBF102916752B00FF955E /* Localisation */ = {
@@ -1338,12 +1384,18 @@
 				F4DFA0FE291653B50060C876 /* OTPCodeEntry.swift in Sources */,
 				F41FE4A928ED81AB00097440 /* URLExtension.swift in Sources */,
 				A3DC863028F644970030F276 /* Texts.swift in Sources */,
-				F423E4BC291AC78000991EBE /* WidgetsBundle.swift in Sources */,
+				F423E4BC291AC78000991EBE /* OTPWidgetBundle.swift in Sources */,
+				F492B44A2AD3D47A007F4CA9 /* OTPCodeAccessoryInline.swift in Sources */,
+				F492B4442AD3D3B6007F4CA9 /* OTPCodeSystemSmall.swift in Sources */,
 				F41FE4B628ED8F8F00097440 /* WidgetIndents.intentdefinition in Sources */,
+				F492B4462AD3D435007F4CA9 /* OTPCodeAccessoryRectangular.swift in Sources */,
 				F41FE47028ED67AC00097440 /* OTPCodeProvider.swift in Sources */,
 				F4CBBF0229166DB300FF955E /* Constants.swift in Sources */,
 				F423E4BF291AC7A500991EBE /* OpenAppWidget.swift in Sources */,
+				F492B4412AD3D19A007F4CA9 /* MarkupView.swift in Sources */,
 				F41FE4AB28ED871700097440 /* OTPCodeEntryView.swift in Sources */,
+				F492B4402AD3D19A007F4CA9 /* MarkupBorderView.swift in Sources */,
+				F492B4482AD3D451007F4CA9 /* OTPCodeAccessoryCircular.swift in Sources */,
 				F41FE46028ED677600097440 /* OTPCodeWidget.swift in Sources */,
 				F423E4C7291ACB4000991EBE /* OpenAppEntryView.swift in Sources */,
 				F423E4C4291ACA4300991EBE /* OpenAppEntry.swift in Sources */,
@@ -1418,9 +1470,10 @@
 				F4CBBECD291662D100FF955E /* OTPCodeEntry.swift in Sources */,
 				F4CBBECE291662D100FF955E /* URLExtension.swift in Sources */,
 				F4CBBECF291662D100FF955E /* Texts.swift in Sources */,
-				F423E4BD291AC78000991EBE /* WidgetsBundle.swift in Sources */,
+				F423E4BD291AC78000991EBE /* OTPWidgetBundle.swift in Sources */,
 				F4CBBED0291662D100FF955E /* WidgetIndents.intentdefinition in Sources */,
 				F4CBBED1291662D100FF955E /* OTPCodeProvider.swift in Sources */,
+				F492B44B2AD3D5B3007F4CA9 /* OTPCodeSystemSmall.swift in Sources */,
 				F4CBBF0129166DB300FF955E /* Constants.swift in Sources */,
 				F423E4C0291AC7A500991EBE /* OpenAppWidget.swift in Sources */,
 				F4CBBED2291662D100FF955E /* OTPCodeEntryView.swift in Sources */,
@@ -1428,6 +1481,9 @@
 				F423E4C8291ACB4000991EBE /* OpenAppEntryView.swift in Sources */,
 				F423E4C5291ACA4300991EBE /* OpenAppEntry.swift in Sources */,
 				F4CBBF0329166E0B00FF955E /* AccountModel.swift in Sources */,
+				F492B44D2AD3D632007F4CA9 /* OTPCodeAccessoryCircular.swift in Sources */,
+				F492B44C2AD3D5C8007F4CA9 /* OTPCodeAccessoryRectangular.swift in Sources */,
+				F492B44E2AD3D635007F4CA9 /* OTPCodeAccessoryInline.swift in Sources */,
 				F4CBBED4291662D100FF955E /* Base32.swift in Sources */,
 				F423E4CB291ACBAB00991EBE /* OpenAppProvider.swift in Sources */,
 				F4CBBEFF29166D9D00FF955E /* KeychainStorage.swift in Sources */,
