@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/firebase/firebase-ios-sdk",
         "state": {
           "branch": null,
-          "revision": "8a8ec57a272e0d31480fb0893dda0cf4f769b57e",
-          "version": "10.15.0"
+          "revision": "837d4af6ead57cec1fc38007892500d3139c7556",
+          "version": "10.16.0"
         }
       },
       {
@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/google/GoogleAppMeasurement.git",
         "state": {
           "branch": null,
-          "revision": "03b9beee1a61f62d32c521e172e192a1663a5e8b",
-          "version": "10.13.0"
+          "revision": "56f681586ff006a7982b53dc94082eea31971acf",
+          "version": "10.16.0"
         }
       },
       {
@@ -69,8 +69,8 @@
         "repositoryURL": "https://github.com/google/grpc-binary.git",
         "state": {
           "branch": null,
-          "revision": "f1b366129d1125be7db83247e003fc333104b569",
-          "version": "1.50.2"
+          "revision": "a673bc2937fbe886dd1f99c401b01b6d977a9c98",
+          "version": "1.49.1"
         }
       },
       {
@@ -141,8 +141,8 @@
         "repositoryURL": "https://github.com/sparrowcode/PermissionsKit",
         "state": {
           "branch": null,
-          "revision": "d10e48fb51a49b1a8db2a814ff7f7353415b72a3",
-          "version": "9.0.5"
+          "revision": "8d6b3d6db7d0654a4e4fe31bbf6556dec6fc3d13",
+          "version": "10.0.1"
         }
       },
       {
@@ -159,8 +159,8 @@
         "repositoryURL": "https://github.com/sparrowcode/SafeSFSymbols",
         "state": {
           "branch": null,
-          "revision": "0fadcb5488f9af7b741b1eb6e0829fe26542beb0",
-          "version": "1.1.5"
+          "revision": "cbd98dea56850f958146c84179d78aa8a097ec6d",
+          "version": "2.0.0"
         }
       },
       {
@@ -258,8 +258,8 @@
         "repositoryURL": "https://github.com/sparrowcode/SwiftUIExtension",
         "state": {
           "branch": null,
-          "revision": "b6ea9bb1b3c1d7a006da23e51ab9a1448635135c",
-          "version": "1.0.5"
+          "revision": "e005014c90402def82857f3e562a2a35c8756a8c",
+          "version": "1.0.9"
         }
       },
       {
