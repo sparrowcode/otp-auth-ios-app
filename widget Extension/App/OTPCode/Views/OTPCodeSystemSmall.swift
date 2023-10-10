@@ -1,34 +1,33 @@
 import SwiftUI
 import SwiftUIExtension
+import SparrowCodeExtension
 
 #if os(iOS)
 struct OTPCodeSystemSmall: View {
     
     var entry: OTPCodeProvider.Entry
     
-    @State private var codeFrame: CGRect = .zero
-    @State private var accountFrame: CGRect = .zero
-    
     @Environment(\.widgetContentMarginsCompability) var margins
     @Environment(\.widgetFamily) var widgetFamily
     
     var body: some View {
         ZStack {
-            VStack {
+            VStack(alignment: .trailing) {
                 HStack(spacing: 2) {
-                    Spacer()
                     Image(systemName: "shield.fill")
                     Text(Texts.short_app_name)
                 }
                 .foregroundColor(.white)
                 .fontWeight(.semibold)
                 .font(.caption)
+                .markup(inset: Spaces.step * 2)
+                .frame(maxWidth: .infinity, alignment: .trailing)
                 Spacer()
             }
             if let issuer = entry.issuer {
-                VStack(spacing: 0) {
+                VStack(spacing: 6) {
                     HStack {
-                        VStack(alignment: .leading, spacing: 0) {
+                        VStack(alignment: .leading, spacing: 6) {
                             Spacer()
                             Text(issuer)
                                 .foregroundColor(.black)
@@ -38,18 +37,7 @@ struct OTPCodeSystemSmall: View {
                                 .lineLimit(1)
                                 .multilineTextAlignment(.leading)
                                 .opacity(0.7)
-                                .background {
-                                    GeometryReader { proxy in
-                                        Color.clear
-                                            .onAppear {
-                                                accountFrame = proxy.frame(in: .global)
-                                            }
-                                            .onChange(of: proxy.size) { newValue in
-                                                accountFrame = proxy.frame(in: .global)
-                                            }
-                                    }
-                                    
-                                }
+                                .markup(inset: Spaces.default_less)
                             Text(entry.otpCode)
                                 .monospacedDigit()
                                 .foregroundColor(.white)
@@ -57,18 +45,7 @@ struct OTPCodeSystemSmall: View {
                                 .font(.title)
                                 .lineLimit(1)
                                 .multilineTextAlignment(.leading)
-                                .background {
-                                    GeometryReader { proxy in
-                                        Color.clear
-                                            .onAppear {
-                                                codeFrame = proxy.frame(in: .global)
-                                            }
-                                            .onChange(of: proxy.size) { newValue in
-                                                codeFrame = proxy.frame(in: .global)
-                                            }
-                                    }
-                                    
-                                }
+                                .markup(inset: Spaces.default_less)
                         }
                         Spacer()
                         if widgetFamily == .systemMedium {
@@ -85,23 +62,22 @@ struct OTPCodeSystemSmall: View {
                             }
                         }
                     }
-                    VStack {
-                        ProgressView(
-                            timerInterval: entry.date...entry.date.addingTimeInterval(30),
-                            countsDown: true,
-                            label: {},
-                            currentValueLabel: {
-                                if widgetFamily != .systemMedium {
-                                    Text(timerInterval: entry.date...entry.date.addingTimeInterval(30), countsDown: true)
-                                        .monospacedDigit()
-                                        .foregroundColor(.white.opacity(0.85))
-                                        .fontWeight(.medium)
-                                }
+                    
+                    ProgressView(
+                        timerInterval: entry.date...entry.date.addingTimeInterval(30),
+                        countsDown: true,
+                        label: {},
+                        currentValueLabel: {
+                            if widgetFamily != .systemMedium {
+                                Text(timerInterval: entry.date...entry.date.addingTimeInterval(30), countsDown: true)
+                                    .monospacedDigit()
+                                    .foregroundColor(.white.opacity(0.85))
+                                    .fontWeight(.medium)
                             }
-                        )
-                        .tint(.white)
-                        .progressViewStyle(.linear)
-                    }
+                        }
+                    )
+                    .tint(.white)
+                    .progressViewStyle(.linear)
                 }
             } else {
                 Text(Texts.no_any_accounts)
@@ -113,33 +89,10 @@ struct OTPCodeSystemSmall: View {
             }
         }
         .containerBackgroundForWidget {
-            
-            Color.accentColor
-            
-            MarkupBorderView(margins: margins)
-            
-            let codeInsets: CGFloat = Spaces.default_less
-            MarkupView(inset: codeInsets)
-                .frame(
-                    width: codeFrame.width + codeInsets * 2,
-                    height: codeFrame.height + codeInsets * 2
-                )
-                .position(
-                    x: codeFrame.midX,
-                    y: codeFrame.midY
-                )
-            
-            let accountInsets: CGFloat = Spaces.default
-            MarkupView(inset: codeInsets)
-                .frame(
-                    width: accountFrame.width + codeInsets * 2,
-                    height: accountFrame.height + codeInsets * 2
-                )
-                .position(
-                    x: accountFrame.midX,
-                    y: accountFrame.midY
-                )
-            
+            ZStack {
+                Color.accentColor
+                MarkupBorderView(with: margins)
+            }
         }
         .widgetURL(OTPCodeEntry.getURL(for: entry))
     }

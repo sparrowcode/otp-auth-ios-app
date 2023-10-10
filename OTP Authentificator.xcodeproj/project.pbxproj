@@ -131,8 +131,6 @@
 		F438F2DA2915893900AD403E /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35E712D28270A160039A4C0 /* Texts.swift */; };
 		F465604C2916BFB4007C203C /* widget watchOS Extension Intent.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F4CBBEF2291662DC00FF955E /* widget watchOS Extension Intent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F47CD2FD2865B064006367E9 /* Base32.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47CD2FC2865B064006367E9 /* Base32.swift */; };
-		F492B4402AD3D19A007F4CA9 /* MarkupBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492B43E2AD3D19A007F4CA9 /* MarkupBorderView.swift */; };
-		F492B4412AD3D19A007F4CA9 /* MarkupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492B43F2AD3D19A007F4CA9 /* MarkupView.swift */; };
 		F492B4442AD3D3B6007F4CA9 /* OTPCodeSystemSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492B4432AD3D3B6007F4CA9 /* OTPCodeSystemSmall.swift */; };
 		F492B4462AD3D435007F4CA9 /* OTPCodeAccessoryRectangular.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492B4452AD3D435007F4CA9 /* OTPCodeAccessoryRectangular.swift */; };
 		F492B4482AD3D451007F4CA9 /* OTPCodeAccessoryCircular.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492B4472AD3D451007F4CA9 /* OTPCodeAccessoryCircular.swift */; };
@@ -338,6 +336,7 @@
 		EB501A8A282D458F00BAED16 /* HomeControllerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerHeaderView.swift; sourceTree = "<group>"; };
 		EB501A8C282EC81100BAED16 /* ExtensionStringProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionStringProtocol.swift; sourceTree = "<group>"; };
 		EBE84F42283590850079771F /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		F418CE642AD5741F0012B2D3 /* SparrowCodeExtension */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SparrowCodeExtension; sourceTree = "<group>"; };
 		F41FE45928ED677600097440 /* widget iOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "widget iOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F41FE45A28ED677600097440 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		F41FE45C28ED677600097440 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -390,8 +389,6 @@
 		F438F2DD2915B61200AD403E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/WidgetIndents.strings; sourceTree = "<group>"; };
 		F47CD2FC2865B064006367E9 /* Base32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base32.swift; sourceTree = "<group>"; };
 		F47FDD082859000900499E8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F492B43E2AD3D19A007F4CA9 /* MarkupBorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkupBorderView.swift; sourceTree = "<group>"; };
-		F492B43F2AD3D19A007F4CA9 /* MarkupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkupView.swift; sourceTree = "<group>"; };
 		F492B4432AD3D3B6007F4CA9 /* OTPCodeSystemSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCodeSystemSmall.swift; sourceTree = "<group>"; };
 		F492B4452AD3D435007F4CA9 /* OTPCodeAccessoryRectangular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCodeAccessoryRectangular.swift; sourceTree = "<group>"; };
 		F492B4472AD3D451007F4CA9 /* OTPCodeAccessoryCircular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCodeAccessoryCircular.swift; sourceTree = "<group>"; };
@@ -637,6 +634,7 @@
 			isa = PBXGroup;
 			children = (
 				F42361702914F95500313B1E /* Imports */,
+				F418CE642AD5741F0012B2D3 /* SparrowCodeExtension */,
 				EB4041502826F6E700C0BBCF /* iOS App */,
 				F42A0266291949A700409B61 /* iOS App Tests */,
 				F438F2A529150B0B00AD403E /* watchOS App */,
@@ -972,18 +970,8 @@
 		F492B43C2AD3D19A007F4CA9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F492B43D2AD3D19A007F4CA9 /* Markup */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		F492B43D2AD3D19A007F4CA9 /* Markup */ = {
-			isa = PBXGroup;
-			children = (
-				F492B43E2AD3D19A007F4CA9 /* MarkupBorderView.swift */,
-				F492B43F2AD3D19A007F4CA9 /* MarkupView.swift */,
-			);
-			path = Markup;
 			sourceTree = "<group>";
 		};
 		F492B4422AD3D3AC007F4CA9 /* Views */ = {
@@ -1392,9 +1380,7 @@
 				F41FE47028ED67AC00097440 /* OTPCodeProvider.swift in Sources */,
 				F4CBBF0229166DB300FF955E /* Constants.swift in Sources */,
 				F423E4BF291AC7A500991EBE /* OpenAppWidget.swift in Sources */,
-				F492B4412AD3D19A007F4CA9 /* MarkupView.swift in Sources */,
 				F41FE4AB28ED871700097440 /* OTPCodeEntryView.swift in Sources */,
-				F492B4402AD3D19A007F4CA9 /* MarkupBorderView.swift in Sources */,
 				F492B4482AD3D451007F4CA9 /* OTPCodeAccessoryCircular.swift in Sources */,
 				F41FE46028ED677600097440 /* OTPCodeWidget.swift in Sources */,
 				F423E4C7291ACB4000991EBE /* OpenAppEntryView.swift in Sources */,

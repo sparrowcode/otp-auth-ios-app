@@ -4,6 +4,7 @@ import PackageDescription
 
 let otpProduct: Target.Dependency = .product(name: "OTP", package: "OTP")
 let swiftBoostProduct: Target.Dependency = .product(name: "SwiftBoost", package: "SwiftBoost")
+let sparrowCodeExtensionProduct: Target.Dependency = .product(name: "SparrowCodeExtension", package: "SparrowCodeExtension")
 let swiftyJSONProduct: Target.Dependency = .product(name: "SwiftyJSON", package: "SwiftyJSON")
 let keychainAccessProduct: Target.Dependency = .product(name: "KeychainAccess", package: "KeychainAccess")
 let swiftUIExtensionProduct: Target.Dependency = .product(name: "SwiftUIExtension", package: "SwiftUIExtension")
@@ -42,7 +43,8 @@ let package = Package(
         .package(url: "https://github.com/kishikawakatsumi/KeychainAccess", .upToNextMajor(from: "4.2.2")),
         .package(url: "https://github.com/sparrowcode/OTP", .upToNextMajor(from: "1.0.0")),
         .package(url: "https://github.com/svyatoynick/GAuthSwiftParser", .upToNextMajor(from: "1.0.3")),
-        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON", .upToNextMajor(from: "5.0.1"))
+        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON", .upToNextMajor(from: "5.0.1")),
+        .package(path: "SparrowCodeExtension")
     ],
     targets: [
         .target(
@@ -73,7 +75,8 @@ let package = Package(
                 swiftBoostProduct,
                 keychainAccessProduct,
                 otpProduct,
-                swiftUIExtensionProduct
+                swiftUIExtensionProduct,
+                sparrowCodeExtensionProduct
             ]
         ),
         .target(
