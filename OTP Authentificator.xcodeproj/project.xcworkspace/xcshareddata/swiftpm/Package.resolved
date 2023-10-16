@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/sparrowcode/AlertKit",
         "state": {
           "branch": null,
-          "revision": "1da133b6f630f4e11d141ce5c05d09b68200278e",
-          "version": "5.0.1"
+          "revision": "89a90fd7ffc5aa1838ed221128203be0d47dab15",
+          "version": "5.1.1"
         }
       },
       {
@@ -258,8 +258,8 @@
         "repositoryURL": "https://github.com/sparrowcode/SwiftUIExtension",
         "state": {
           "branch": null,
-          "revision": "e005014c90402def82857f3e562a2a35c8756a8c",
-          "version": "1.0.9"
+          "revision": "94cf28ae360b39c61bdd7a61bcd0a54d4c4d3e1b",
+          "version": "1.0.11"
         }
       },
       {

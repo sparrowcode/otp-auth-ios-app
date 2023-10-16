@@ -798,9 +798,8 @@
 			children = (
 				F43CC4472AAE52F900870A2C /* App */,
 				F438F2DE2915B62D00AD403E /* Resources */,
-				F492B43C2AD3D19A007F4CA9 /* Views */,
+				F4303E9F2ADD1FC300A1EF04 /* Data */,
 				F41FE4AE28ED8C6300097440 /* Localisation */,
-				F41FE4AC28ED8BDB00097440 /* Texts.swift */,
 			);
 			path = "widget Extension";
 			sourceTree = "<group>";
@@ -863,6 +862,14 @@
 				F42A02782919872700409B61 /* watchOSAppTestsLaunchTests.swift */,
 			);
 			path = "watchOS App Tests";
+			sourceTree = "<group>";
+		};
+		F4303E9F2ADD1FC300A1EF04 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F41FE4AC28ED8BDB00097440 /* Texts.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		F438F2A529150B0B00AD403E /* watchOS App */ = {
@@ -965,13 +972,6 @@
 				F423E4C1291AC7AC00991EBE /* OpenApp */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		F492B43C2AD3D19A007F4CA9 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		F492B4422AD3D3AC007F4CA9 /* Views */ = {
@@ -1168,7 +1168,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					EB40414D2826F6E700C0BBCF = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -1624,6 +1624,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1659,6 +1660,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1674,7 +1676,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 2.5.11;
+				MARKETING_VERSION = 2.5.12;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1688,6 +1690,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1723,6 +1726,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1732,7 +1736,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 2.5.11;
+				MARKETING_VERSION = 2.5.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
