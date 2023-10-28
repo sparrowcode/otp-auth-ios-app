@@ -13,7 +13,7 @@ class ScanController: SPController {
     internal var qrCodeData: QRCodeData? { didSet { updateInterface() }}
     internal var updateTimer: Timer?
     internal let frameLayer = QRFrameLayer()
-    internal lazy var captureSession: AVCaptureSession = makeCaptureSession()
+    internal lazy var captureSession: AVCaptureSession? = makeCaptureSession()
     internal let detailView = QRDetailButton()
     let scanView = ScanView()
     lazy var cameraView = makeVideoPreviewLayer()
@@ -46,12 +46,15 @@ class ScanController: SPController {
         scanView.cameraPreview.masksToBounds = true
         cameraView = makeVideoPreviewLayer()
         
-        scanView.cameraPreview.layer.addSublayer(cameraView)
+        if let cameraView {
+            scanView.cameraPreview.layer.addSublayer(cameraView)
+        }
+        
         scanView.cameraPreview.layer.addSublayer(frameLayer)
         scanView.cameraPreview.addSubview(detailView)
         
         DispatchQueue.global(qos: .userInitiated).async {
-            self.captureSession.startRunning()
+            self.captureSession?.startRunning()
         }
         
         updateInterface()
@@ -75,7 +78,7 @@ class ScanController: SPController {
     }
     
     override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
-        self.captureSession.stopRunning()
+        self.captureSession?.stopRunning()
         super.dismiss(animated: flag, completion: completion)
     }
     
@@ -108,7 +111,7 @@ class ScanController: SPController {
             scanView.center.y = view.frame.height / 2
         }
         
-        cameraView.frame.size = scanView.cameraPreview.frame.size
+        cameraView?.frame.size = scanView.cameraPreview.frame.size
         
         if !presented {
             scanView.frame.origin.y = self.view.frame.height + 40
@@ -121,13 +124,13 @@ class ScanController: SPController {
         
         switch (orientation) {
         case .portrait:
-            cameraView.connection!.videoOrientation = .portrait
+            cameraView?.connection?.videoOrientation = .portrait
         case .landscapeLeft:
-            cameraView.connection!.videoOrientation = .landscapeRight
+            cameraView?.connection?.videoOrientation = .landscapeRight
         case .landscapeRight:
-            cameraView.connection!.videoOrientation = .landscapeLeft
+            cameraView?.connection?.videoOrientation = .landscapeLeft
         default:
-            cameraView.connection!.videoOrientation = .portrait
+            cameraView?.connection?.videoOrientation = .portrait
         }
         
         viewDidLayoutSubviews()

@@ -51,7 +51,8 @@ extension ScanController {
         }
     }
     
-    internal func makeVideoPreviewLayer() -> AVCaptureVideoPreviewLayer {
+    internal func makeVideoPreviewLayer() -> AVCaptureVideoPreviewLayer? {
+        guard let captureSession else { return nil }
         let videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         videoPreviewLayer.cornerRadius = scanView.cameraPreview.layer.cornerRadius
         videoPreviewLayer.videoGravity = .resizeAspectFill

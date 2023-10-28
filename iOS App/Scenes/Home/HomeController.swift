@@ -163,6 +163,8 @@ class HomeController: SPDiffableTableController {
             }
         }
         
+        print(passwordsData.map({ $0.url }))
+        
         if accountsSection.items.isEmpty {
             accountsSection.items.append(
                 NativeEmptyRowItem.init(

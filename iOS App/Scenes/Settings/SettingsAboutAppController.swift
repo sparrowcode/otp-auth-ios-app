@@ -114,7 +114,10 @@ class SettingsAboutAppController: SPDiffableTableController, SFSafariViewControl
                     let fakeData = [
                         "otpauth://totp/hello@sparrowcode.io?secret=JBSWY3DPEHPK3PXP&issuer=SparrowCode",
                         "otpauth://totp/ivanvorobei@sparrowcode.io?secret=JBSWY3DPEHPK3PFD&issuer=Sketch",
-                        "otpauth://totp/hello@ivanvorobei.io?secret=JBSWY3DPEHPK3PKD&issuer=DigitalOcean"
+                        "otpauth://totp/hello@ivanvorobei.io?secret=JBSWY3DPEHPK3PKD&issuer=DigitalOcean",
+                        "otpauth://totp/hello@ivanvorobei.io?secret=JBNWY3DPEHPK3PKD&issuer=Google",
+                        "otpauth://totp/hello@ivanvorobei.io?secret=JBNWY3DPEHPK6PKD&issuer=GoDaddy",
+                        "otpauth://totp/hello@ivanvorobei.io?secret=JBNWY3DPEHPK7PKD&issuer=Apple"
                     ]
                     var fakeURLs: [URL] = []
                     for rawString in fakeData {

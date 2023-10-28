@@ -10,7 +10,7 @@ extension ScanController: AVCaptureMetadataOutputObjectsDelegate {
         guard Self.supportedCodeTypes.contains(object.type) else { return }
         guard let detectedData = convert(object: object) else { return }
         let observingData = detectQRCodeData(detectedData, self)
-        guard let transformedObject = cameraView.transformedMetadataObject(for: object) as? AVMetadataMachineReadableCodeObject else { return }
+        guard let transformedObject = cameraView?.transformedMetadataObject(for: object) as? AVMetadataMachineReadableCodeObject else { return }
         
         let points = transformedObject.corners
         
