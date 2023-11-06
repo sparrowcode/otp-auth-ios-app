@@ -30,14 +30,14 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(name: "Firebase", url: "https://github.com/firebase/firebase-ios-sdk", .upToNextMajor(from: "10.16.0")),
+        .package(name: "Firebase", url: "https://github.com/firebase/firebase-ios-sdk", .upToNextMajor(from: "10.17.0")),
         .package(url: "https://github.com/ivanvorobei/SPDiffable", .upToNextMajor(from: "4.2.0")),
-        .package(url: "https://github.com/sparrowcode/SwiftBoost", .upToNextMajor(from: "4.0.0")),
+        .package(url: "https://github.com/sparrowcode/SwiftBoost", .upToNextMajor(from: "4.0.5")),
         .package(url: "https://github.com/ivanvorobei/NativeUIKit", .upToNextMajor(from: "1.4.7")),
         .package(url: "https://github.com/sparrowcode/SettingsIconGenerator", .upToNextMajor(from: "1.0.2")),
         .package(url: "https://github.com/sparrowcode/SafeSFSymbols", .upToNextMajor(from: "2.0.0")),
         .package(url: "https://github.com/sparrowcode/PermissionsKit", .upToNextMajor(from: "10.0.1")),
-        .package(url: "https://github.com/sparrowcode/AlertKit", .upToNextMajor(from: "5.1.4")),
+        .package(url: "https://github.com/sparrowcode/AlertKit", .upToNextMajor(from: "5.1.7")),
         .package(url: "https://github.com/sparrowcode/SwiftUIExtension", .upToNextMajor(from: "1.0.11")),
         .package(url: "https://github.com/ivanvorobei/SPIndicator", .upToNextMajor(from: "1.6.4")),
         .package(url: "https://github.com/kishikawakatsumi/KeychainAccess", .upToNextMajor(from: "4.2.2")),
