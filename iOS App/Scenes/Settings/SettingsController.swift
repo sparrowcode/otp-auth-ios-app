@@ -304,7 +304,6 @@ class SettingsController: SPDiffableTableController, MFMailComposeViewController
             txtBody = body.replacingOccurrences(of: "<br />", with: "\n")
             txtBody = txtBody.replacingOccurrences(of: "<br/>", with: "\n")
             if txtBody.contains("/>") {
-                print("Can't send html email with url interface")
                 return false
             }
         }

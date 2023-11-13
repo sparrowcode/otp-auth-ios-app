@@ -36,7 +36,6 @@ class WatchSync: NSObject, WCSessionDelegate {
     private func syncWithMainApp() {
         let context = WatchSync.getApplicationContext()
         let json = JSON(context)
-        print("current is \(json)")
         var newURLs: [URL] = []
         for value in json["accounts"].arrayValue {
             if let string = value.string, let newurl = URL(string: string) {

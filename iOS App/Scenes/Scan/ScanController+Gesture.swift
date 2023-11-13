@@ -12,8 +12,6 @@ extension ScanController {
         case .changed:
             let translation = gesture.translation(in: view)
             
-            print("TranslationY is \(translation.y)\nsqrt is: \(sqrt(abs(translation.y)))\ninitialcenter is \(initialCenter.y)\nscanView center is \(scanView.center.y)")
-            
             if translation.y >= 0 {
                 let absTranslationY = abs(translation.y)
                 let sqrtTranslationY = (sqrt(absTranslationY))

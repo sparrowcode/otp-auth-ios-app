@@ -56,6 +56,7 @@ class OTPTableViewCell: SPTableViewCell {
         
         websiteLabel.sizeToFit()
         loginLabel.sizeToFit()
+        
         if websiteLabel.frame.width > layoutWidth / 2 && loginLabel.frame.width < layoutWidth / 2  {
             websiteLabel.layoutDynamicHeight(
                 x: contentView.layoutMargins.left,
@@ -74,7 +75,7 @@ class OTPTableViewCell: SPTableViewCell {
             websiteLabel.sizeToFit()
         }
         
-        let loginLabelX = websiteLabel.frame.maxX + 10
+        let loginLabelX = (websiteLabel.text?.isEmpty ?? true) ? contentView.layoutMargins.left : websiteLabel.frame.maxX + 10
         loginLabel.layoutDynamicHeight(
             x: loginLabelX,
             y: contentView.layoutMargins.top,
@@ -83,7 +84,7 @@ class OTPTableViewCell: SPTableViewCell {
         
         codeView.frame = .init(
             x: contentView.layoutMargins.left,
-            y: websiteLabel.frame.maxY + 10,
+            y: max(websiteLabel.frame.maxY, loginLabel.frame.maxY) + 10,
             width: codeView.frame.width,
             height: frame.height - websiteLabel.frame.maxY - 20
         )

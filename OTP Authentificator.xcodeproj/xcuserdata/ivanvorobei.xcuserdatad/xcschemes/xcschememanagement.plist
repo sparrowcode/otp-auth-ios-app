@@ -171,7 +171,7 @@
 		<key>widget iOS Extension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>9</integer>
 		</dict>
 		<key>widget watchOS Extension Intent.xcscheme_^#shared#^_</key>
 		<dict>

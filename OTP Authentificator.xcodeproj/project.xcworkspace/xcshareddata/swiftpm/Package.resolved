@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/sparrowcode/AlertKit",
         "state": {
           "branch": null,
-          "revision": "3c7acb28451f1b1d2b9d815280ab1276963544e7",
-          "version": "5.1.7"
+          "revision": "3d35de60ad26aab58395ebecdd63b533546862ed",
+          "version": "5.1.8"
         }
       },
       {
@@ -60,8 +60,8 @@
         "repositoryURL": "https://github.com/google/GoogleUtilities.git",
         "state": {
           "branch": null,
-          "revision": "1cd556b33550982ec17f80e358253d905e756f0f",
-          "version": "7.11.6"
+          "revision": "bc27fad73504f3d4af235de451f02ee22586ebd3",
+          "version": "7.12.1"
         }
       },
       {
@@ -105,8 +105,8 @@
         "repositoryURL": "https://github.com/firebase/leveldb.git",
         "state": {
           "branch": null,
-          "revision": "0706abcc6b0bd9cedfbb015ba840e4a780b5159b",
-          "version": "1.22.2"
+          "revision": "9d108e9112aa1d65ce508facf804674546116d9c",
+          "version": "1.22.3"
         }
       },
       {
@@ -240,8 +240,8 @@
         "repositoryURL": "https://github.com/sparrowcode/SwiftBoost",
         "state": {
           "branch": null,
-          "revision": "94643f50e8f796cdc5ea94a9e3fc5304d0880bbb",
-          "version": "4.0.7"
+          "revision": "326ac1accd8261196dc4da5db8e396803ebdc64f",
+          "version": "4.0.8"
         }
       },
       {
