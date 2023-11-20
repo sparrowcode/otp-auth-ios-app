@@ -20,12 +20,21 @@
         }
       },
       {
+        "package": "AppCheck",
+        "repositoryURL": "https://github.com/google/app-check.git",
+        "state": {
+          "branch": null,
+          "revision": "5746b2d35c91c50581590ed97abe4c06b5037274",
+          "version": "10.18.0"
+        }
+      },
+      {
         "package": "Firebase",
         "repositoryURL": "https://github.com/firebase/firebase-ios-sdk",
         "state": {
           "branch": null,
-          "revision": "8872dbd7d947acf757abab933da10e83c1842280",
-          "version": "10.17.0"
+          "revision": "5de0369ee79ad096c164eb3afeb7921d92a43b58",
+          "version": "10.18.0"
         }
       },
       {
