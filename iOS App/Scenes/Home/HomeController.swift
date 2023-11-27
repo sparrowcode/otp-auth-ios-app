@@ -6,6 +6,7 @@ import SettingsIconGenerator
 import CameraPermission
 import SPIndicator
 import WidgetKit
+import SafeSFSymbols
 
 class HomeController: SPDiffableTableController {
     
@@ -63,7 +64,39 @@ class HomeController: SPDiffableTableController {
         diffableDataSource?.mediator = self
         diffableDataSource?.diffableDelegate = self
         
-        headerView.scanButton.addTarget(self, action: #selector(scanButtonTapped), for: .primaryActionTriggered)
+        headerView.scanButton.menu = .init(children: [
+            UIAction(title: Texts.HomeController.scan_qr_code, image: .init(SafeSFSymbol.qrcode.viewfinder), handler: { _ in
+                self.startScanningbyCamera()
+            }),
+            UIAction(title: Texts.HomeController.enter_code_manually, image: .init(SafeSFSymbol.keyboard), handler: { _ in
+                let alertController = UIAlertController(title: Texts.HomeController.enter_code_manually_alert_title, message: nil, preferredStyle: .alert)
+                
+                alertController.addTextField { textField in
+                    textField.text = nil
+                    textField.placeholder = Texts.HomeController.enter_code_manually_alert_placeholder
+                    textField.keyboardType = .URL
+                    textField.addAction(.init(handler: { _ in
+                        var enabled = false
+                        if let value = textField.text, let _ = URL(string: value) {
+                            enabled = true
+                        } else {
+                            enabled = false
+                        }
+                        alertController.actions.first?.isEnabled = enabled
+                    }), for: .editingChanged)
+                }
+                alertController.addAction(title: Texts.HomeController.enter_code_manually_alert_action_add) { _ in
+                    if let text = alertController.textFields?.first?.text, let url = URL(string: text) {
+                        self.handledQR(tranformedData: text, url: url, controller: nil)
+                    }
+                }
+                alertController.addAction(title: Texts.Shared.cancel)
+                alertController.actions.first?.isEnabled = false
+                self.present(alertController)
+            })
+        ])
+        headerView.scanButton.showsMenuAsPrimaryAction = true
+        //headerView.scanButton.addTarget(self, action: #selector(startScanningbyCamera), for: .primaryActionTriggered)
         
         
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(reload), userInfo: nil, repeats: true)

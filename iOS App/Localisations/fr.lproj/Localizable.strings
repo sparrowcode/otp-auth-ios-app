@@ -408,3 +408,23 @@
 
 /* No comment provided by engineer. */
 "watch settings show profile title" = "Afficher le profil";
+
+"root controller scan qr code" = "Scan QR-Code";
+
+"root controller enter code manually" = "Enter Manually";
+
+"root controller enter code manually alert title" = "Insert your code";
+
+"root controller enter code manually alert placeholder" = "Usually start with otpauth://totp";
+
+"root controller enter code manually alert action add" = "Add";
+
+"root controller scan qr code" = "Scanner le QR-Code";
+
+"root controller enter code manually" = "Saisie manuelle";
+
+"root controller enter code manually alert title" = "Insérez votre code";
+
+"root controller enter code manually alert placeholder" = "Commence généralement par otpauth://totp";
+
+"root controller enter code manually alert action add" = "Ajouter";

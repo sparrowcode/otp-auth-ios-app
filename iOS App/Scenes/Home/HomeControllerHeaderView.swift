@@ -2,13 +2,18 @@ import UIKit
 import SparrowKit
 import NativeUIKit
 import SPDiffable
+import SafeSFSymbols
 
 class RootControllerHeaderView: SPView {
 
     // MARK: - Views
 
     let scanButton = NativeLargeActionButton().do {
-        $0.set(title: Texts.HomeController.header_view_action, icon: Images.scan, colorise: .init(content: .tint, background: .tint.alpha(0.1)))
+        $0.set(
+            title: Texts.HomeController.header_view_action,
+            icon: .init(SafeSFSymbol.plus.circleFill),
+            colorise: .init(content: .tint, background: .tint.alpha(0.1))
+        )
     }
 
     let footerLabel = SPLabel().do {
@@ -32,7 +37,11 @@ class RootControllerHeaderView: SPView {
     
     override func tintColorDidChange() {
         super.tintColorDidChange()
-        scanButton.set(title: Texts.HomeController.header_view_action, icon: Images.scan, colorise: .init(content: .tint, background: .tint.alpha(0.1)))
+        scanButton.set(
+            title: Texts.HomeController.header_view_action,
+            icon: .init(SafeSFSymbol.plus.circleFill),
+            colorise: .init(content: .tint, background: .tint.alpha(0.1))
+        )
     }
 
     override func layoutSubviews() {

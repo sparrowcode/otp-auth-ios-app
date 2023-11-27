@@ -88,6 +88,12 @@ enum Texts {
 
         static var title: String { NSLocalizedString("root controller title", comment: "") }
         
+        static var scan_qr_code: String { NSLocalizedString("root controller scan qr code", comment: "") }
+        static var enter_code_manually: String { NSLocalizedString("root controller enter code manually", comment: "") }
+        static var enter_code_manually_alert_title: String { NSLocalizedString("root controller enter code manually alert title", comment: "") }
+        static var enter_code_manually_alert_placeholder: String { NSLocalizedString("root controller enter code manually alert placeholder", comment: "") }
+        static var enter_code_manually_alert_action_add: String { NSLocalizedString("root controller enter code manually alert action add", comment: "") }
+        
         static var header_view_action: String { NSLocalizedString("root controller header view action", comment: "") }
         static var header_view_description: String { NSLocalizedString("root controller header view description", comment: "") }
         

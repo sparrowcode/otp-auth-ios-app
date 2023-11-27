@@ -10,7 +10,7 @@ extension HomeController {
     
     // MARK: - Actions
     
-    @objc func scanButtonTapped() {
+    @objc func startScanningbyCamera() {
         
         scannedData = []
         
@@ -126,7 +126,7 @@ extension HomeController {
         if url.scheme == "otpauth-migration" {
             handledGoogleParser(tranformedData: tranformedData, url: url, dataQR: dataQR, controller: controller)
         } else {
-           handledQR(tranformedData: tranformedData, url: url, dataQR: dataQR, controller: controller)
+           handledQR(tranformedData: tranformedData, url: url, controller: controller)
         }
         
     }
@@ -150,7 +150,7 @@ extension HomeController {
         controller.dismissAnimated()
     }
     
-    func handledQR(tranformedData: String, url: URL, dataQR: QRCodeData, controller: ScanController) {
+    func handledQR(tranformedData: String, url: URL, controller: ScanController?) {
         
         let name = url.lastPathComponent
         let issuer = url.valueOf("issuer")
@@ -215,10 +215,10 @@ extension HomeController {
             
             if KeychainStorage.getAccounts().contains(where: { $0.secret == token }) {
                 AlertService.alertTheSameCode()
-                controller.dismissAnimated()
+                controller?.dismissAnimated()
             } else {
                 AlertService.code_added()
-                controller.dismissAnimated()
+                controller?.dismissAnimated()
             }
             
             KeychainStorage.add(urls: [url])

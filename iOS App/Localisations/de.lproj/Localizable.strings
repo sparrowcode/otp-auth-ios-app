@@ -408,3 +408,13 @@
 
 /* No comment provided by engineer. */
 "watch settings show profile title" = "Profil Arbeitgebern anzeigen";
+
+"root controller scan qr code" = "QR-Code scannen";
+
+"root controller enter code manually" = "Manuell eingeben";
+
+"root controller enter code manually alert title" = "Ihren Code einfügen";
+
+"root controller enter code manually alert placeholder" = "Normalerweise beginnen Sie mit otpauth://totp";
+
+"root controller enter code manually alert action add" = "Hinzufügen";

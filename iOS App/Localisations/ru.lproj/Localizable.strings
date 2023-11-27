@@ -408,3 +408,13 @@
 
 /* No comment provided by engineer. */
 "watch settings show profile title" = "Показать Профиль";
+
+"root controller scan qr code" = "Сканировать QR-Code";
+
+"root controller enter code manually" = "Ввести вручную";
+
+"root controller enter code manually alert title" = "Вставьте код";
+
+"root controller enter code manually alert placeholder" = "Обычно начинается с otpauth://totp";
+
+"root controller enter code manually alert action add" = "Добавить";

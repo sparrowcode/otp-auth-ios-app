@@ -1,5 +1,5 @@
 /* No comment provided by engineer. */
-"alert service code added" = "Account connected";
+"alert service code added" = "Account Added";
 
 /* No comment provided by engineer. */
 "alert service code deleted" = "Account deleted";
@@ -408,3 +408,13 @@
 
 /* No comment provided by engineer. */
 "watch settings show profile title" = "Show Profile";
+
+"root controller scan qr code" = "Scan QR-Code";
+
+"root controller enter code manually" = "Enter Manually";
+
+"root controller enter code manually alert title" = "Insert your code";
+
+"root controller enter code manually alert placeholder" = "Usually start with otpauth://totp";
+
+"root controller enter code manually alert action add" = "Add";
