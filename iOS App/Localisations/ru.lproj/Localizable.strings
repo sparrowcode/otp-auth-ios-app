@@ -415,6 +415,16 @@
 
 "root controller enter code manually alert title" = "Вставьте код";
 
-"root controller enter code manually alert placeholder" = "Обычно начинается с otpauth://totp";
+"root controller enter code manually alert description" = "Вы можете вставить URL c otpauth:// или только секрет.";
+
+"root controller enter code manually alert placeholder" = "Вставьте URL-код или ключ";
 
 "root controller enter code manually alert action add" = "Добавить";
+
+"root controller section account insert account title" = "Укажите имя аккаунта";
+
+"root controller section account insert account description" = "Вы указали только ключ, теперь укажите название или аккаунт для ключа. Будет видно на домашнем экране.";
+
+"root controller section account insert account placeholder" = "Например: Госуслуги";
+
+"root controller section account insert account action add" = "Добавить";

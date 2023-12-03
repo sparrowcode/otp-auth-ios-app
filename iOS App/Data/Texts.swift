@@ -91,6 +91,7 @@ enum Texts {
         static var scan_qr_code: String { NSLocalizedString("root controller scan qr code", comment: "") }
         static var enter_code_manually: String { NSLocalizedString("root controller enter code manually", comment: "") }
         static var enter_code_manually_alert_title: String { NSLocalizedString("root controller enter code manually alert title", comment: "") }
+        static var enter_code_manually_alert_description: String { NSLocalizedString("root controller enter code manually alert description", comment: "") }
         static var enter_code_manually_alert_placeholder: String { NSLocalizedString("root controller enter code manually alert placeholder", comment: "") }
         static var enter_code_manually_alert_action_add: String { NSLocalizedString("root controller enter code manually alert action add", comment: "") }
         
@@ -101,6 +102,11 @@ enum Texts {
         static var empty_cell_title: String { NSLocalizedString("root controller empty cell title", comment: "") }
         static var empty_cell_subitle: String { NSLocalizedString("root controller empty cell subtitle", comment: "") }
         static var account_section_footer: String { NSLocalizedString("root controller account section footer", comment: "") }
+        
+        static var insert_account_title: String { NSLocalizedString("root controller section account insert account title", comment: "") }
+        static var insert_account_description: String { NSLocalizedString("root controller section account insert account description", comment: "") }
+        static var insert_account_placeholder: String { NSLocalizedString("root controller section account insert account placeholder", comment: "") }
+        static var insert_account_action_add: String { NSLocalizedString("root controller section account insert account action add", comment: "") }
         
         static var settings_button: String { NSLocalizedString("root controller settings button", comment: "") }
         static var settings_section_footer: String { NSLocalizedString("root controller settings section footer", comment: "") }

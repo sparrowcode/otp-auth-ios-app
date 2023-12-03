@@ -415,6 +415,16 @@
 
 "root controller enter code manually alert title" = "Ihren Code einfügen";
 
-"root controller enter code manually alert placeholder" = "Normalerweise beginnen Sie mit otpauth://totp";
+"root controller enter code manually alert description" = "Sie können eine URL mit otpauth:// einfügen oder nur das Geheimnis.";
+
+"root controller enter code manually alert placeholder" = "URL-Code oder Geheimnis einfügen";
 
 "root controller enter code manually alert action add" = "Hinzufügen";
+
+"root controller section account insert account title" = "Kontoname angeben";
+
+"root controller section account insert account description" = "Sie haben nur den Schlüssel angegeben, jetzt geben Sie bitte einen Namen oder ein Konto für den Schlüssel an. Es wird auf dem Startbildschirm sichtbar sein.";
+
+"root controller section account insert account placeholder" = "Beispiel: Apple";
+
+"root controller section account insert account action add" = "Hinzufügen";

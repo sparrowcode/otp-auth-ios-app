@@ -69,15 +69,18 @@ class HomeController: SPDiffableTableController {
                 self.startScanningbyCamera()
             }),
             UIAction(title: Texts.HomeController.enter_code_manually, image: .init(SafeSFSymbol.keyboard), handler: { _ in
-                let alertController = UIAlertController(title: Texts.HomeController.enter_code_manually_alert_title, message: nil, preferredStyle: .alert)
-                
+                let alertController = UIAlertController(
+                    title: Texts.HomeController.enter_code_manually_alert_title,
+                    message: Texts.HomeController.enter_code_manually_alert_description, 
+                    preferredStyle: .alert
+                )
                 alertController.addTextField { textField in
                     textField.text = nil
                     textField.placeholder = Texts.HomeController.enter_code_manually_alert_placeholder
                     textField.keyboardType = .URL
                     textField.addAction(.init(handler: { _ in
                         var enabled = false
-                        if let value = textField.text, let _ = URL(string: value) {
+                        if let value = textField.text, value.trim.count > 3 {
                             enabled = true
                         } else {
                             enabled = false
@@ -86,8 +89,40 @@ class HomeController: SPDiffableTableController {
                     }), for: .editingChanged)
                 }
                 alertController.addAction(title: Texts.HomeController.enter_code_manually_alert_action_add) { _ in
-                    if let text = alertController.textFields?.first?.text, let url = URL(string: text) {
-                        self.handledQR(tranformedData: text, url: url, controller: nil)
+                    if let text = alertController.textFields?.first?.text {
+                        let processText = text.trim
+                        if processText.hasPrefix("otpauth://"), let url = URL(string: processText) {
+                            self.handledQR(tranformedData: text, url: url, controller: nil)
+                        } else {
+                            // Only secret
+                            let accountAlertController = UIAlertController(title: Texts.HomeController.insert_account_title, message: Texts.HomeController.insert_account_description, preferredStyle: .alert)
+                            accountAlertController.addTextField { textField in
+                                textField.text = nil
+                                textField.placeholder = Texts.HomeController.insert_account_placeholder
+                                textField.keyboardType = .URL
+                                textField.addAction(.init(handler: { _ in
+                                    var enabled = false
+                                    if let value = textField.text, value.trim.count > 3 {
+                                        enabled = true
+                                    } else {
+                                        enabled = false
+                                    }
+                                    alertController.actions.first?.isEnabled = enabled
+                                }), for: .editingChanged)
+                            }
+                            accountAlertController.addAction(title: Texts.HomeController.insert_account_action_add, style: .default) { _ in
+                                if let account = accountAlertController.textFields?.first?.text {
+                                    let string = "otpauth://totp/\(account)?secret=\(text)&issuer=\(account)"
+                                    if let newurl = URL(string: string) {
+                                        self.handledQR(tranformedData: string, url: newurl, controller: nil)
+                                    }
+                                }
+                            }
+                            accountAlertController.addAction(title: Texts.Shared.cancel)
+                            self.present(accountAlertController)
+                        }
+                        // otpauth://totp/hello@ivanvorobei.io?secret=JBNWY3DPEHPK3PKD&issuer=Google
+                        //self.handledQR(tranformedData: text, url: url, controller: nil)
                     }
                 }
                 alertController.addAction(title: Texts.Shared.cancel)

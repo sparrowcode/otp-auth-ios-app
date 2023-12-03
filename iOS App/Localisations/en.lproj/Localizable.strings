@@ -2,7 +2,7 @@
 "alert service code added" = "Account Added";
 
 /* No comment provided by engineer. */
-"alert service code deleted" = "Account deleted";
+"alert service code deleted" = "Account Deleted";
 
 /* No comment provided by engineer. */
 "alert service email error" = "Failed to open mail";
@@ -415,6 +415,17 @@
 
 "root controller enter code manually alert title" = "Insert your code";
 
-"root controller enter code manually alert placeholder" = "Usually start with otpauth://totp";
+"root controller enter code manually alert description" = "You can paste url with otpauth:// or only secret.";
+
+"root controller enter code manually alert placeholder" = "Paste url-code or secret";
 
 "root controller enter code manually alert action add" = "Add";
+
+"root controller section account insert account title" = "Specify account name";
+
+"root controller section account insert account description" = "You have only specified the key, now please specify a name or account for the key. It will be visible on the home screen.";
+
+"root controller section account insert account placeholder" = "For instance: Apple";
+
+"root controller section account insert account action add" = "Add";
+
