@@ -303,7 +303,25 @@ class SettingsController: SPDiffableTableController, MFMailComposeViewController
     }
     
     func sendEmailToSupport() {
-        if MFMailComposeViewController.canSendMail() {
+        let subject = "OTP Authenticator"
+        let application = UIApplication.shared
+        
+        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
+        let build = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String
+        
+        let body = """
+        
+        
+        Debug Info (please don't delete it):
+        Version: \(version ?? "undef")
+        Build: \(build ?? "undef")
+        """
+        
+        let coded = "mailto:\(Constants.Email.feedback)?subject=\(subject)&body=\(body)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        if let emailURL = URL(string: coded!), application.canOpenURL(emailURL) {
+            application.open(emailURL)
+        }
+        /*if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
             mail.setToRecipients([Constants.Email.feedback])
@@ -317,7 +335,7 @@ class SettingsController: SPDiffableTableController, MFMailComposeViewController
                 body: Texts.SettingsController.feedback_email_body + " \(Texts.SettingsController.AboutApp.version_cell_detail):",
                 isHtml: true
             ) { AlertService.email_error() }
-        }
+        }*/
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
