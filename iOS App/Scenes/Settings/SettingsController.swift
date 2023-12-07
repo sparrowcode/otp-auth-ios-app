@@ -101,7 +101,7 @@ class SettingsController: SPDiffableTableController, MFMailComposeViewController
         )
         sections.append(appSection)
         
-        
+        /*
         if Locale.current.languageCode == "ru" || Locale.current.languageCode == "uk" || Locale.current.languageCode == "be" || Locale.current.languageCode == "kk" {
             let mediaSection = SPDiffableSection(
                 id: Section.media.id,
@@ -190,38 +190,28 @@ class SettingsController: SPDiffableTableController, MFMailComposeViewController
                 ]
             )
             sections.append(mediaSection)
-        }
+        }*/
         
         let feedbackSection = SPDiffableSection(
             id: Section.feedback.id,
             header: SPDiffableTextHeaderFooter(text: Texts.SettingsController.feedback_section_header),
             footer: SPDiffableTextHeaderFooter(text: Texts.SettingsController.feedback_section_footer),
             items: [
-                /*
-                 NativeDiffableLeftButton(
-                 id: Item.review.id,
-                 text: Texts.SettingsController.review_button,
-                 detail: nil,
-                 icon: Images.review,
-                 accessoryType: .disclosureIndicator,
-                 action: { item, indexPath in
-                 #warning("Add review logic")
-                 /*
-                  var components = URLComponents(url: URL(string: ""), resolvingAgainstBaseURL: false)
-                  
-                  components?.queryItems = [
-                  URLQueryItem(name: "action", value: "write-review")
-                  ]
-                  
-                  guard let writeReviewURL = components?.url else {
-                  return
-                  }
-                  
-                  UIApplication.shared.open(writeReviewURL)
-                  */
-                 }
-                 ),
-                 */
+                NativeDiffableLeftButton(
+                    id: Item.telegram.id,
+                    text: Texts.SettingsController.contact_button,
+                    detail: nil,
+                    icon: Images.telegram,
+                    accessoryType: .disclosureIndicator,
+                    action: { item, indexPath in
+                        let directURL = URL(string: "tg://resolve?domain=ivanvorobei")!
+                        if UIApplication.shared.canOpenURL(directURL) {
+                            UIApplication.shared.open(directURL)
+                        } else {
+                            self.openUrl(urlStr: "https://t.me/ivanvorobei")
+                        }
+                    }
+                ),
                 NativeDiffableLeftButton(
                     id: Item.feedback.id,
                     text: Texts.SettingsController.contact_button,
@@ -285,6 +275,7 @@ class SettingsController: SPDiffableTableController, MFMailComposeViewController
         case languages
         case review
         case feedback
+        case feedback_telegram
         case website
         case telegram
         case twitter

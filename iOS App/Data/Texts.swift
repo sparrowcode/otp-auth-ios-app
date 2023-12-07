@@ -85,7 +85,7 @@ enum Texts {
     }
     
     enum HomeController {
-
+        
         static var title: String { NSLocalizedString("root controller title", comment: "") }
         
         static var scan_qr_code: String { NSLocalizedString("root controller scan qr code", comment: "") }
@@ -116,7 +116,7 @@ enum Texts {
     }
     
     enum ExportController {
-
+        
         static var title: String { NSLocalizedString("export controller title", comment: "") }
         static var description: String { NSLocalizedString("export controller description", comment: "") }
         
