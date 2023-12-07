@@ -1,5 +1,6 @@
 import UIKit
 import SafeSFSymbols
+import SparrowKit
 
 enum Images {
     static var copy: UIImage { .system("doc.on.doc.fill", font: UIFont.systemFont(ofSize: 19, weight: .medium)) }
@@ -18,7 +19,10 @@ enum Images {
     static var contact: UIImage { .generateSettingsIcon("envelope.fill", backgroundColor: .systemBlue) ?? UIImage() }
     
     static var website: UIImage { .init(named: "Media Icon - Website") ?? UIImage() }
-    static var telegram: UIImage { .init(named: "Media Icon - Telegram") ?? UIImage() }
+    static var telegram: UIImage {
+        .generateSettingsIcon("paperplane.fill", backgroundColor: .init(hex: "0088cc")) ?? .init()
+        //.init(named: "Media Icon - Telegram") ?? UIImage()
+    }
     static var twitter: UIImage { .init(named: "Media Icon - Twitter") ?? UIImage() }
     static var instagram: UIImage { .init(named: "Media Icon - Instagram") ?? UIImage() }
     static var github: UIImage { .init(named: "Media Icon - GitHub") ?? UIImage() }

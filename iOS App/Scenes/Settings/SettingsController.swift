@@ -192,6 +192,7 @@ class SettingsController: SPDiffableTableController, MFMailComposeViewController
             sections.append(mediaSection)
         }*/
         
+        
         let feedbackSection = SPDiffableSection(
             id: Section.feedback.id,
             header: SPDiffableTextHeaderFooter(text: Texts.SettingsController.feedback_section_header),
@@ -235,26 +236,6 @@ class SettingsController: SPDiffableTableController, MFMailComposeViewController
             ]
         )
         sections.append(feedbackSection)
-        /*
-         let aboutSection = SPDiffableSection(
-         id: Section.about.id,
-         header: nil,
-         footer: SPDiffableTextHeaderFooter(text: Texts.SettingsController.about_section_footer),
-         items: [
-         NativeDiffableLeftButton(
-         id: Item.about_app.id,
-         text: Texts.SettingsController.about_button,
-         detail: nil,
-         icon: Images.about,
-         accessoryType: .disclosureIndicator,
-         action: { item, indexPath in
-         self.navigationController?.pushViewController(SettingsAboutAppController(style: .insetGrouped), animated: true)
-         }
-         )
-         ]
-         )
-         sections.append(aboutSection)
-         */
         
         return sections
     }

@@ -262,6 +262,38 @@ class HomeController: SPDiffableTableController {
                 )
             ]
         )
+        
+        let showContact: Bool = {
+            if #available(iOS 16, *) {
+                guard let regionCode = Locale.current.region?.identifier.lowercased() else { return false }
+                let support = ["ru", "by", "uk", "kk"]
+                return support.contains(regionCode)
+            } else {
+                return false
+            }
+        }()
+        
+        if (showContact) {
+            settingsSection.items.insert(
+                NativeDiffableLeftButton(
+                    id: "settings telegram",
+                    text: Texts.SettingsController.contact_button,
+                    detail: nil,
+                    icon: Images.telegram,
+                    accessoryType: .disclosureIndicator,
+                    action: { item, indexPath in
+                        let directURL = URL(string: "tg://resolve?domain=ivanvorobei")!
+                        if UIApplication.shared.canOpenURL(directURL) {
+                            UIApplication.shared.open(directURL)
+                        } else {
+                            UIApplication.shared.open(.init(string: "https://t.me/ivanvorobei")!)
+                        }
+                    }
+                ),
+                at: 0
+            )
+        }
+        
         sections.append(settingsSection)
         
         return sections
