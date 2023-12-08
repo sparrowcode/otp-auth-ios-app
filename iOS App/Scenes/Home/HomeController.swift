@@ -71,7 +71,7 @@ class HomeController: SPDiffableTableController {
             UIAction(title: Texts.HomeController.enter_code_manually, image: .init(SafeSFSymbol.keyboard), handler: { _ in
                 let alertController = UIAlertController(
                     title: Texts.HomeController.enter_code_manually_alert_title,
-                    message: Texts.HomeController.enter_code_manually_alert_description, 
+                    message: Texts.HomeController.enter_code_manually_alert_description,
                     preferredStyle: .alert
                 )
                 alertController.addTextField { textField in
@@ -110,12 +110,13 @@ class HomeController: SPDiffableTableController {
                                 }), for: .editingChanged)
                             }
                             accountAlertController.addAction(title: Texts.HomeController.insert_account_action_add, style: .default) { _ in
-                                if let account = accountAlertController.textFields?.first?.text {
-                                    let usingSecret = text.replace("-", with: "")
-                                    let string = "otpauth://totp/\(account)?secret=\(usingSecret)&issuer=\(account)"
-                                    if let newurl = URL(string: string) {
-                                        self.handledQR(tranformedData: string, url: newurl, controller: nil)
-                                    }
+                                let account = accountAlertController.textFields?.first?.text ?? "Default Account"
+                                let usingSecret = text.replace("-", with: "")
+                                let string = "otpauth://totp/\(account.trim)?secret=\(usingSecret.trim)&issuer=\(account.trim)"
+                                if let newurl = URL(string: string) {
+                                    self.handledQR(tranformedData: string, url: newurl, controller: nil)
+                                } else {
+                                    AlertService.alertUndef(code: "Can't convert to URL")
                                 }
                             }
                             accountAlertController.addAction(title: Texts.Shared.cancel)

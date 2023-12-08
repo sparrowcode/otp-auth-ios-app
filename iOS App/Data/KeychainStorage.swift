@@ -44,6 +44,7 @@ enum KeychainStorage {
     static func add(urls: [URL], with keychainID: String = Constants.Keychain.service) {
         if urls.isEmpty { return }
         let keychain = Keychain(service: keychainID)
+        
         for url in urls {
             keychain[url.absoluteString] = url.absoluteString
         }

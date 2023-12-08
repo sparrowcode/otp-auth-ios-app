@@ -21,6 +21,11 @@ enum AlertService {
         SoundsService.play(sound: .delete)
     }
     
+    static func alertUndef(code: String) {
+        AlertKitAPI.present(title: Texts.Alerts.no_token + "Code Error \(code).", subtitle: nil, icon: .error, style: .iOS17AppleMusic, haptic: .error)
+        SoundsService.play(sound: .error)
+    }
+    
     static func alertNoToken() {
         AlertKitAPI.present(title: Texts.Alerts.no_token, subtitle: nil, icon: .error, style: .iOS17AppleMusic, haptic: .error)
         SoundsService.play(sound: .error)
