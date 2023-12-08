@@ -112,9 +112,12 @@ class HomeController: SPDiffableTableController {
                             accountAlertController.addAction(title: Texts.HomeController.insert_account_action_add, style: .default) { _ in
                                 let account = accountAlertController.textFields?.first?.text ?? "Default Account"
                                 let usingSecret = text.replace("-", with: "")
-                                let string = "otpauth://totp/\(account.trim)?secret=\(usingSecret.trim)&issuer=\(account.trim)"
+                                
+                                var string = "otpauth://totp/\(account.trim)?secret=\(usingSecret.trim)&issuer=\(account.trim)"
+                                string = string.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? string
+                                
                                 if let newurl = URL(string: string) {
-                                    self.handledQR(tranformedData: string, url: newurl, controller: nil)
+                                    self.handledQR(tranformedData: newurl.absoluteString, url: newurl, controller: nil)
                                 } else {
                                     AlertService.alertUndef(code: "Can't convert to URL")
                                 }
@@ -319,5 +322,28 @@ class HomeController: SPDiffableTableController {
         case settings
         
         var id: String { rawValue }
+    }
+}
+
+extension URL {
+
+    func appending(_ queryItem: String, value: String?) -> URL {
+
+        guard var urlComponents = URLComponents(string: absoluteString) else { return absoluteURL }
+
+        // Create array of existing query items
+        var queryItems: [URLQueryItem] = urlComponents.queryItems ??  []
+
+        // Create query item
+        let queryItem = URLQueryItem(name: queryItem, value: value)
+
+        // Append the new query item in the existing query items array
+        queryItems.append(queryItem)
+
+        // Append updated query items array in the url component object
+        urlComponents.queryItems = queryItems
+
+        // Returns the url from new url components
+        return urlComponents.url!
     }
 }
