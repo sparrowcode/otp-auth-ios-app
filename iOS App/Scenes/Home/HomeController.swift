@@ -99,7 +99,6 @@ class HomeController: SPDiffableTableController {
                             accountAlertController.addTextField { textField in
                                 textField.text = nil
                                 textField.placeholder = Texts.HomeController.insert_account_placeholder
-                                textField.keyboardType = .URL
                                 textField.addAction(.init(handler: { _ in
                                     var enabled = false
                                     if let value = textField.text, value.trim.count > 3 {
@@ -112,7 +111,8 @@ class HomeController: SPDiffableTableController {
                             }
                             accountAlertController.addAction(title: Texts.HomeController.insert_account_action_add, style: .default) { _ in
                                 if let account = accountAlertController.textFields?.first?.text {
-                                    let string = "otpauth://totp/\(account)?secret=\(text)&issuer=\(account)"
+                                    let usingSecret = text.replace("-", with: "")
+                                    let string = "otpauth://totp/\(account)?secret=\(usingSecret)&issuer=\(account)"
                                     if let newurl = URL(string: string) {
                                         self.handledQR(tranformedData: string, url: newurl, controller: nil)
                                     }
