@@ -151,6 +151,7 @@ enum Texts {
         static var feedback_section_header: String { NSLocalizedString("setings controller feedback section header", comment: "") }
         static var review_button: String { NSLocalizedString("settings controller review cell", comment: "") }
         static var contact_button: String { NSLocalizedString("settings controller contact cell", comment: "") }
+        static var telegram_chat: String { NSLocalizedString("settings controller contact telegram chat cell", comment: "") }
         static var feedback_email_body: String { NSLocalizedString("settings controller feedback email body", comment: "") }
         static var feedback_section_footer: String { NSLocalizedString("setings controller feedback section footer", comment: "") }
         

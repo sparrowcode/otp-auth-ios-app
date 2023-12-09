@@ -200,16 +200,16 @@ class SettingsController: SPDiffableTableController, MFMailComposeViewController
             items: [
                 NativeDiffableLeftButton(
                     id: Item.telegram.id,
-                    text: Texts.SettingsController.contact_button,
+                    text: Texts.SettingsController.telegram_chat,
                     detail: nil,
                     icon: Images.telegram,
                     accessoryType: .disclosureIndicator,
                     action: { item, indexPath in
-                        let directURL = URL(string: "tg://resolve?domain=ivanvorobei")!
+                        let directURL = URL(string: "tg://resolve?domain=otp_auth")!
                         if UIApplication.shared.canOpenURL(directURL) {
                             UIApplication.shared.open(directURL)
                         } else {
-                            self.openUrl(urlStr: "https://t.me/ivanvorobei")
+                            self.openUrl(urlStr: "https://t.me/otp_auth")
                         }
                     }
                 ),

@@ -20,7 +20,7 @@ enum Images {
     
     static var website: UIImage { .init(named: "Media Icon - Website") ?? UIImage() }
     static var telegram: UIImage {
-        .generateSettingsIcon("paperplane.fill", backgroundColor: .init(hex: "0088cc")) ?? .init()
+        .generateSettingsIcon("paperplane.fill", backgroundColor: .init(hex: "31A6DE")) ?? .init()
         //.init(named: "Media Icon - Telegram") ?? UIImage()
     }
     static var twitter: UIImage { .init(named: "Media Icon - Twitter") ?? UIImage() }

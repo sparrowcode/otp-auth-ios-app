@@ -281,16 +281,16 @@ class HomeController: SPDiffableTableController {
             settingsSection.items.insert(
                 NativeDiffableLeftButton(
                     id: "settings telegram",
-                    text: Texts.SettingsController.contact_button,
+                    text: Texts.SettingsController.telegram_chat,
                     detail: nil,
                     icon: Images.telegram,
                     accessoryType: .disclosureIndicator,
                     action: { item, indexPath in
-                        let directURL = URL(string: "tg://resolve?domain=ivanvorobei")!
+                        let directURL = URL(string: "tg://resolve?domain=otp_auth")!
                         if UIApplication.shared.canOpenURL(directURL) {
                             UIApplication.shared.open(directURL)
                         } else {
-                            UIApplication.shared.open(.init(string: "https://t.me/ivanvorobei")!)
+                            UIApplication.shared.open(.init(string: "https://t.me/otp_auth")!)
                         }
                     }
                 ),

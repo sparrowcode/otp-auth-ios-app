@@ -214,6 +214,8 @@
 /* No comment provided by engineer. */
 "settings controller contact cell" = "Зв'яжіться з нами";
 
+"settings controller contact telegram chat cell" = "Зв'яжіться з нами";
+
 /* No comment provided by engineer. */
 "settings controller delete alert message" = "Обліковий запис буде видалено. Ви не зможете отримати доступ без коду, якщо у вас не налаштовані інші методи автентифікації.";
 

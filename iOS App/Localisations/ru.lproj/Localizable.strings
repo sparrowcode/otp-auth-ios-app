@@ -214,6 +214,8 @@
 /* No comment provided by engineer. */
 "settings controller contact cell" = "Свяжитесь с нами";
 
+"settings controller contact telegram chat cell" = "Чат в Telegram (помощь)";
+
 /* No comment provided by engineer. */
 "settings controller delete alert message" = "Учетная запись будет удалена. Вы не сможете получить доступ без кода, если у вас не настроены другие методы аутентификации.";
 

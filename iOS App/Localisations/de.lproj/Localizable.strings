@@ -214,6 +214,8 @@
 /* No comment provided by engineer. */
 "settings controller contact cell" = "Kontaktieren Sie uns";
 
+"settings controller contact telegram chat cell" = "Kontaktieren Sie uns";
+
 /* No comment provided by engineer. */
 "settings controller delete alert message" = "Das Konto wird gelöscht. Sie können ohne den Code nicht zugreifen, es sei denn, Sie haben andere Authentifizierungsmethoden eingerichtet.";
 
