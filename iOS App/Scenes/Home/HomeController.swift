@@ -111,7 +111,7 @@ class HomeController: SPDiffableTableController {
                             }
                             accountAlertController.addAction(title: Texts.HomeController.insert_account_action_add, style: .default) { _ in
                                 let account = accountAlertController.textFields?.first?.text ?? "Default Account"
-                                let usingSecret = text.replace("-", with: "")
+                                var usingSecret = text.replace("-", with: "").replace(" ", with: "")
                                 
                                 var string = "otpauth://totp/\(account.trim)?secret=\(usingSecret.trim)&issuer=\(account.trim)"
                                 string = string.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? string
