@@ -86,6 +86,18 @@ enum Texts {
     
     enum HomeController {
         
+        enum Rename {
+            
+            static var title: String { NSLocalizedString("root controller rename title", comment: "") }
+            static var set_new_name_title: String { NSLocalizedString("root controller rename set new name action", comment: "") }
+            static var set_new_name_description: String { NSLocalizedString("root controller rename set new name description", comment: "") }
+            
+            static var completed_renamed: String { NSLocalizedString("root controller rename completed", comment: "") }
+        }
+        
+        static var account_title: String { NSLocalizedString("root controller account title", comment: "") }
+        static var issuer_title: String { NSLocalizedString("root controller issuer title", comment: "") }
+        
         static var title: String { NSLocalizedString("root controller title", comment: "") }
         
         static var scan_qr_code: String { NSLocalizedString("root controller scan qr code", comment: "") }

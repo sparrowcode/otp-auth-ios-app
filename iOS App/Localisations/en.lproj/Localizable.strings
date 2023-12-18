@@ -431,3 +431,9 @@
 
 "root controller section account insert account action add" = "Add";
 
+"root controller rename title" = "Rename";
+"root controller rename set new name action" = "Set new Account & Issuer";
+"root controller rename set new name description" = "The code will not change. Only the name you see on the home screen will be updated.";
+"root controller account title" = "Account";
+"root controller issuer title" = "Issuer";
+"root controller rename completed" = "Set new name";

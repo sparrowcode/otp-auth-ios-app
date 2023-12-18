@@ -430,3 +430,10 @@
 "root controller section account insert account placeholder" = "Наприклад: Apple";
 
 "root controller section account insert account action add" = "Додати";
+
+"root controller rename title" = "Перейменувати";
+"root controller rename set new name action" = "Встановити нові назву облікового запису та видавця";
+"root controller rename set new name description" = "Код не зміниться. Змінюється лише назва, яку ви бачите на домашньому екрані.";
+"root controller account title" = "Обліковий запис";
+"root controller issuer title" = "Видавець";
+"root controller rename completed" = "Оновив назву";

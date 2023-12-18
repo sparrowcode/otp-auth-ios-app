@@ -430,3 +430,10 @@
 "root controller section account insert account placeholder" = "Beispiel: Apple";
 
 "root controller section account insert account action add" = "Hinzufügen";
+
+"root controller rename title" = "Umbenennen";
+"root controller rename set new name action" = "Neuen Kontonamen & Herausgeber festlegen";
+"root controller rename set new name description" = "Der Code wird sich nicht ändern. Nur der Name, den Sie auf dem Startbildschirm sehen, wird aktualisiert.";
+"root controller account title" = "Konto";
+"root controller issuer title" = "Herausgeber";
+"root controller rename completed" = "Den Titel aktualisiert";

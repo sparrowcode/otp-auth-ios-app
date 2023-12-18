@@ -7,6 +7,7 @@ enum Images {
     static var close: UIImage { .system("checkmark.circle.fill", font: UIFont.systemFont(ofSize: 19, weight: .medium)) }
     static var scan: UIImage { .system("qrcode.viewfinder", font: UIFont.systemFont(ofSize: 19, weight: .medium)) }
     static var delete: UIImage { .system("trash.fill", font: UIFont.systemFont(ofSize: 19, weight: .medium)) }
+    static var rename: UIImage { .system("pencil", font: UIFont.systemFont(ofSize: 19, weight: .medium)) }
     static var export: UIImage { .system("qrcode", font: UIFont.systemFont(ofSize: 19, weight: .medium)) }
     static var settings: UIImage { .generateSettingsIcon("gear", backgroundColor: .tint) ?? UIImage() }
     

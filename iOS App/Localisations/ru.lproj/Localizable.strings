@@ -430,3 +430,10 @@
 "root controller section account insert account placeholder" = "Например: Госуслуги";
 
 "root controller section account insert account action add" = "Добавить";
+
+"root controller rename title" = "Переименовать";
+"root controller rename set new name action" = "Установить новые имя для логин и сервиса";
+"root controller rename set new name description" = "Код не изменится. Обновится только имя, которое вы видите на домашнем экране.";
+"root controller account title" = "Логин";
+"root controller issuer title" = "Сервис";
+"root controller rename completed" = "Обновил название";

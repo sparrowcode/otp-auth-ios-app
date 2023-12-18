@@ -38,7 +38,7 @@ enum KeychainStorage {
         
         self.delete(urls: toDeleteURLs)
         
-        return accounts
+        return accounts.sorted(by: { $0.issuer < $1.issuer })
     }
     
     static func add(urls: [URL], with keychainID: String = Constants.Keychain.service) {
