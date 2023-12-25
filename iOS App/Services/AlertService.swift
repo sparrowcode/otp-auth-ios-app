@@ -6,8 +6,9 @@ import SPIndicator
 enum AlertService {
     
     static func copied() {
-        let indicatorView = SPIndicatorView(title: Texts.Shared.copied, preset: .done)
-        indicatorView.present(duration: 3)
+        AlertKitAPI.present(title:  Texts.Shared.copied, subtitle: nil, icon: .done, style: .iOS17AppleMusic, haptic: .success)
+        //let indicatorView = SPIndicatorView(title: Texts.Shared.copied, preset: .done)
+        //indicatorView.present(duration: 3)
         SoundsService.play(sound: .success)
     }
     

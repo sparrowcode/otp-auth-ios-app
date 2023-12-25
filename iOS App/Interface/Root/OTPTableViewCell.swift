@@ -20,7 +20,8 @@ class OTPTableViewCell: SPTableViewCell {
     var codeView = CodeView()
     
     let copyButton = SPButton().do {
-        $0.setImage(Images.copy, for: .normal)
+        $0.setImage(Images.copy.alwaysTemplate, for: .normal)
+        $0.setImage(Images.copy.alwaysTemplate, for: .highlighted)
         $0.isUserInteractionEnabled = false
     }
     

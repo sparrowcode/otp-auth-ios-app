@@ -8,7 +8,7 @@ extension SPDiffableTableDataSource.CellProvider {
             guard let model = (item as? SPDiffableWrapperItem)?.model as? AccountModel else { return nil }
             let cell = tableView.dequeueReusableCell(withClass: OTPTableViewCell.self, for: indexPath)
             cell.sizeToFit()
-            cell.selectionStyle = .none
+            cell.selectionStyle = .default
             cell.updateCell(model: model)
             
             return cell

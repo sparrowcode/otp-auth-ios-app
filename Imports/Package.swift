@@ -30,7 +30,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(name: "Firebase", url: "https://github.com/firebase/firebase-ios-sdk", .upToNextMajor(from: "10.18.0")),
+        .package(name: "Firebase", url: "https://github.com/firebase/firebase-ios-sdk", .upToNextMajor(from: "10.19.1")),
         .package(url: "https://github.com/ivanvorobei/SPDiffable", .upToNextMajor(from: "4.2.0")),
         .package(url: "https://github.com/sparrowcode/SwiftBoost", .upToNextMajor(from: "4.0.8")),
         .package(url: "https://github.com/ivanvorobei/NativeUIKit", .upToNextMajor(from: "1.4.7")),

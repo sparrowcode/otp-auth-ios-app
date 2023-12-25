@@ -56,6 +56,7 @@ class HomeController: SPDiffableTableController {
         passwordsData = KeychainStorage.getAccounts()
         
         tableView.cellLayoutMarginsFollowReadableWidth = true
+        //tableView.allowsSelection = false
         tableView.register(NativeEmptyTableViewCell.self)
         tableView.register(OTPTableViewCell.self)
         configureDiffable(sections: content, cellProviders: [.empty, .account] + SPDiffableTableDataSource.CellProvider.default)
@@ -305,15 +306,10 @@ class HomeController: SPDiffableTableController {
     
     private func didTap(indexPath: IndexPath) {
         guard let cell = self.tableView.cellForRow(at: indexPath) as? OTPTableViewCell else { return }
+        tableView.deselectRow(at: indexPath, animated: true)
         cell.copyButton.isHighlighted = true
-        if let code = cell.password {
-            debug("Copied code \(code)")
-            UIPasteboard.general.string = cell.password
-            AlertService.copied()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                cell.copyButton.isHighlighted = false
-            }
-        }
+        UIPasteboard.general.string = cell.password
+        AlertService.copied()
     }
     
     enum Section: String {
