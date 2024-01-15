@@ -249,8 +249,8 @@
         "repositoryURL": "https://github.com/sparrowcode/SwiftBoost",
         "state": {
           "branch": null,
-          "revision": "326ac1accd8261196dc4da5db8e396803ebdc64f",
-          "version": "4.0.8"
+          "revision": "324f9feb4cd84cf6735af2f34afc4f40f2ca736b",
+          "version": "4.0.9"
         }
       },
       {
@@ -267,8 +267,8 @@
         "repositoryURL": "https://github.com/sparrowcode/SwiftUIExtension",
         "state": {
           "branch": null,
-          "revision": "94cf28ae360b39c61bdd7a61bcd0a54d4c4d3e1b",
-          "version": "1.0.11"
+          "revision": "f07747cb21dc2334e87f2440550f32629313243e",
+          "version": "1.0.14"
         }
       },
       {
