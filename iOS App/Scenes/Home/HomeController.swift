@@ -278,6 +278,21 @@ class HomeController: SPDiffableTableController {
             }
         }()
         
+        settingsSection.items.insert(
+            NativeDiffableLeftButton(
+                id: "settings left review",
+                text: Texts.SettingsController.review_button,
+                detail: nil,
+                icon: Images.review,
+                accessoryType: .disclosureIndicator,
+                action: { item, indexPath in
+                    let url = "itms-apps://itunes.apple.com/app/id1625641322?action=write-review&mt=8"
+                    UIApplication.shared.open(.init(string: url)!)
+                }
+            ),
+            at: 0
+        )
+        
         if (showContact) {
             settingsSection.items.insert(
                 NativeDiffableLeftButton(
