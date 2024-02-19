@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/firebase/firebase-ios-sdk",
         "state": {
           "branch": null,
-          "revision": "b880ec8ec927a838c51c12862c6222c30d7097d7",
-          "version": "10.20.0"
+          "revision": "f91c8167141d0279726c6f6d9d4a47c026785cbc",
+          "version": "10.21.0"
         }
       },
       {
@@ -51,8 +51,8 @@
         "repositoryURL": "https://github.com/google/GoogleAppMeasurement.git",
         "state": {
           "branch": null,
-          "revision": "ceec9f28dea12b7cf3dabf18b5ed7621c88fd4aa",
-          "version": "10.20.0"
+          "revision": "cb8617fab75d181270a1d8f763f26b15c73e2e1e",
+          "version": "10.21.0"
         }
       },
       {
@@ -231,8 +231,8 @@
         "repositoryURL": "https://github.com/apple/swift-crypto.git",
         "state": {
           "branch": null,
-          "revision": "ddb07e896a2a8af79512543b1c7eb9797f8898a5",
-          "version": "1.1.7"
+          "revision": "cc76b894169a3c86b71bac10c78a4db6beb7a9ad",
+          "version": "3.2.0"
         }
       },
       {
@@ -258,8 +258,8 @@
         "repositoryURL": "https://github.com/lachlanbell/SwiftOTP.git",
         "state": {
           "branch": null,
-          "revision": "e43757cd3851b77ca7da195b3355c4a6f2991a0e",
-          "version": "3.0.1"
+          "revision": "9660551ea3df153c3cbacfa34ac3abbec73a8b84",
+          "version": "3.0.2"
         }
       },
       {
