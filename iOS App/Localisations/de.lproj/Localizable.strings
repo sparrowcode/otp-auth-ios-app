@@ -437,3 +437,8 @@
 "root controller account title" = "Konto";
 "root controller issuer title" = "Herausgeber";
 "root controller rename completed" = "Den Titel aktualisiert";
+
+"enter code manually info action" = "Woher den Code bekommen?";
+"enter code manually info alert title" = "Woher den Code bekommen?";
+"enter code manually info alert description" = "Wenn Sie den TOTP-Schutz aktivieren, erhalten Sie von der Website (z. B. Instagram) einen Code. Sie fügen diesen Code in die App ein und ein 6-stelliger TOTP-Code erscheint. Wenn die Website bereits nach 6 Ziffern fragt, Sie den Code aber verloren haben oder Ihr Telefon verloren haben, müssen Sie die Website-Verwaltung kontaktieren, um einen neuen Code zu erhalten oder den TOTP-Schutz zu deaktivieren.";
+"enter code manually info alert close" = "Verstehe";

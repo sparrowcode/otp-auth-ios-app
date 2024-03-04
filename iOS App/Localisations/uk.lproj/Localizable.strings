@@ -437,3 +437,8 @@
 "root controller account title" = "Обліковий запис";
 "root controller issuer title" = "Видавець";
 "root controller rename completed" = "Оновив назву";
+
+"enter code manually info action" = "Звідки взяти код";
+"enter code manually info alert title" = "Звідки взяти код";
+"enter code manually info alert description" = "Коли ви підключаєте TOTP-захист, сайт (наприклад, VK) видає код. Ви додаєте цей код у застосунок і з'явиться TOTP-код із 6 цифр.\n\nЯкщо у вас уже просить 6 цифр, але код або телефон ви загубили, то потрібно звернутися до адміністрації сайту, щоб видали новий код або відключили TOTP-захист.";
+"enter code manually info alert close" = "Зрозуміло";

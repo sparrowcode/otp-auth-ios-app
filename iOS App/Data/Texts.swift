@@ -107,6 +107,11 @@ enum Texts {
         static var enter_code_manually_alert_placeholder: String { NSLocalizedString("root controller enter code manually alert placeholder", comment: "") }
         static var enter_code_manually_alert_action_add: String { NSLocalizedString("root controller enter code manually alert action add", comment: "") }
         
+        static var enter_code_manually_info_action: String { NSLocalizedString("enter code manually info action", comment: "") }
+        static var enter_code_manually_info_alert_title: String { NSLocalizedString("enter code manually info alert title", comment: "") }
+        static var enter_code_manually_info_alert_description: String { NSLocalizedString("enter code manually info alert description", comment: "") }
+        static var enter_code_manually_info_alert_close: String { NSLocalizedString("enter code manually info alert close", comment: "") }
+        
         static var header_view_action: String { NSLocalizedString("root controller header view action", comment: "") }
         static var header_view_description: String { NSLocalizedString("root controller header view description", comment: "") }
         

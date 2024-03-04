@@ -437,3 +437,8 @@
 "root controller account title" = "Логин";
 "root controller issuer title" = "Сервис";
 "root controller rename completed" = "Обновил название";
+
+"enter code manually info action" = "Откуда взять код";
+"enter code manually info alert title" = "Где взять код?";
+"enter code manually info alert description" = "Когда вы подключаете TOTP-защиту, сайт (например, VK) выдает код. Вы добавляете этот код в приложение и появится TOTP-код из 6 цифр.\n\nЕсли у вас уже просит 6 цифр, но код или телефон вы потеряли, то нужно обратится к администрации сайта, чтобы выдали новый код или отключили TOTP-защиту.";
+"enter code manually info alert close" = "Понятно";

@@ -415,7 +415,7 @@
 
 "root controller enter code manually" = "Enter Manually";
 
-"root controller enter code manually alert title" = "Insert your code";
+"root controller enter code manually alert title" = "Insert your Code";
 
 "root controller enter code manually alert description" = "You can paste url with otpauth:// or only secret.";
 
@@ -437,3 +437,8 @@
 "root controller account title" = "Account";
 "root controller issuer title" = "Issuer";
 "root controller rename completed" = "Set new name";
+
+"enter code manually info action" = "Where get the code?";
+"enter code manually info alert title" = "Where get the code?";
+"enter code manually info alert description" = "When you connect TOTP protection, the site (e.g. Instagram) will give you a code. You add this code to the app and a 6-digit TOTP code will appear.\n\nIf the site is already asking for 6 digits, but you lost the code or lost your phone, you need to contact the site administration to issue a new code or disable TOTP protection.";
+"enter code manually info alert close" = "I see";
