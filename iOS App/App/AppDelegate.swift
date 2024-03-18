@@ -4,8 +4,10 @@ import SparrowKit
 import NativeUIKit
 import Firebase
 import SPIndicator
+import SwiftyJSON
 
 var processCopyOTPCode: String? = nil
+var showReviewAferAddCode: Bool = false
 
 @main
 class AppDelegate: SPAppWindowDelegate {
@@ -26,6 +28,18 @@ class AppDelegate: SPAppWindowDelegate {
         
         AppearanceControlService.check()
         WatchSync.configure()
+        
+        let url = URL(string: "https://otp.apps.sparrowcode.io/start")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let data = data {
+                let json = JSON(data)
+                let state = json["flags"]["request_review_after_add_code"].bool
+                showReviewAferAddCode = state ?? false
+            }
+        }
+        task.resume()
         
         return true
     }

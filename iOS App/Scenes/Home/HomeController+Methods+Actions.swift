@@ -1,4 +1,5 @@
 import UIKit
+import StoreKit
 import NativeUIKit
 import PermissionsKit
 import SPDiffable
@@ -219,6 +220,12 @@ extension HomeController {
             } else {
                 AlertService.code_added()
                 controller?.dismissAnimated()
+                
+                if showReviewAferAddCode {
+                    if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                        SKStoreReviewController.requestReview(in: scene)
+                    }
+                }
             }
             
             KeychainStorage.add(urls: [url])
