@@ -44,7 +44,8 @@ let package = Package(
         .package(url: "https://github.com/svyatoynick/GAuthSwiftParser", .upToNextMajor(from: "1.0.3")),
         .package(url: "https://github.com/SwiftyJSON/SwiftyJSON", .upToNextMajor(from: "5.0.1")),
         .package(path: "SparrowCodeExtension"),
-        .package(url: "https://github.com/sparrowcode/FirebaseWrapper", .exactItem("1.0.0"))
+        .package(url: "https://github.com/sparrowcode/FirebaseWrapper", .exactItem("1.0.0")),
+        .package(url: "https://github.com/firebase/firebase-ios-sdk", .upToNextMajor(from: "10.23.0")),
     ],
     targets: [
         .target(
@@ -61,7 +62,12 @@ let package = Package(
                 keychainAccessProduct,
                 otpProduct,
                 .product(name: "GAuthSwiftParser", package: "GAuthSwiftParser"),
-                .product(name: "FirebaseWrapperRemoteConfig", package: "FirebaseWrapper")
+                .product(name: "FirebaseWrapperRemoteConfig", package: "FirebaseWrapper"),
+                .product(name: "FirebaseAnalytics", package: "firebase-ios-sdk"),
+                .product(name: "FirebaseMessaging", package: "firebase-ios-sdk"),
+                .product(name: "FirebaseCrashlytics", package: "firebase-ios-sdk"),
+                .product(name: "FirebasePerformance", package: "firebase-ios-sdk"),
+                .product(name: "FirebaseAppCheck", package: "firebase-ios-sdk"),
             ]
         ),
         .target(
