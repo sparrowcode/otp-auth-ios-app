@@ -30,7 +30,6 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(name: "Firebase", url: "https://github.com/firebase/firebase-ios-sdk", .upToNextMajor(from: "10.20.0")),
         .package(url: "https://github.com/ivanvorobei/SPDiffable", .upToNextMajor(from: "4.2.0")),
         .package(url: "https://github.com/sparrowcode/SwiftBoost", .upToNextMajor(from: "4.0.9")),
         .package(url: "https://github.com/ivanvorobei/NativeUIKit", .upToNextMajor(from: "1.4.7")),
@@ -44,19 +43,15 @@ let package = Package(
         .package(url: "https://github.com/sparrowcode/OTP", .upToNextMajor(from: "1.0.0")),
         .package(url: "https://github.com/svyatoynick/GAuthSwiftParser", .upToNextMajor(from: "1.0.3")),
         .package(url: "https://github.com/SwiftyJSON/SwiftyJSON", .upToNextMajor(from: "5.0.1")),
-        .package(path: "SparrowCodeExtension")
+        .package(path: "SparrowCodeExtension"),
+        .package(url: "https://github.com/sparrowcode/FirebaseWrapper", .exactItem("1.0.0"))
     ],
     targets: [
         .target(
             name: "iOSAppImport",
             dependencies: [
                 swiftyJSONProduct,
-                .product(name: "FirebaseMessaging", package: "Firebase"),
-                .product(name: "FirebaseCrashlytics", package: "Firebase"),
-                .product(name: "FirebasePerformance", package: "Firebase"),
-                .product(name: "FirebaseAppCheck", package: "Firebase"),
                 .product(name: "SPDiffable", package: "SPDiffable"),
-                swiftBoostProduct,
                 .product(name: "NativeUIKit", package: "NativeUIKit"),
                 .product(name: "SettingsIconGenerator", package: "SettingsIconGenerator"),
                 .product(name: "SafeSFSymbols", package: "SafeSFSymbols"),
@@ -65,7 +60,8 @@ let package = Package(
                 .product(name: "SPIndicator", package: "SPIndicator"),
                 keychainAccessProduct,
                 otpProduct,
-                .product(name: "GAuthSwiftParser", package: "GAuthSwiftParser")
+                .product(name: "GAuthSwiftParser", package: "GAuthSwiftParser"),
+                .product(name: "FirebaseWrapperRemoteConfig", package: "FirebaseWrapper")
             ]
         ),
         .target(

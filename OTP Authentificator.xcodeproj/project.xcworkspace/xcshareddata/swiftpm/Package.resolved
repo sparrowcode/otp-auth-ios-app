@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/google/abseil-cpp-binary.git",
         "state": {
           "branch": null,
-          "revision": "df308b8b46607675f2b9ec8e569109008f9155ce",
-          "version": "1.2022062300.1"
+          "revision": "7ce7be095bc3ed3c98b009532fe2d7698c132614",
+          "version": "1.2024011601.0"
         }
       },
       {
@@ -33,8 +33,17 @@
         "repositoryURL": "https://github.com/firebase/firebase-ios-sdk",
         "state": {
           "branch": null,
-          "revision": "be49849dcba96f2b5ee550d4eceb2c0fa27dade4",
-          "version": "10.22.1"
+          "revision": "fcf5ced6dae2d43fced2581e673cc3b59bdb8ffa",
+          "version": "10.23.0"
+        }
+      },
+      {
+        "package": "FirebaseWrapper",
+        "repositoryURL": "https://github.com/sparrowcode/FirebaseWrapper",
+        "state": {
+          "branch": null,
+          "revision": "ca0937077ea29364c25d11e8293a5cd8fc3cac83",
+          "version": "1.0.0"
         }
       },
       {
@@ -51,8 +60,8 @@
         "repositoryURL": "https://github.com/google/GoogleAppMeasurement.git",
         "state": {
           "branch": null,
-          "revision": "482cfa4e5880f0a29f66ecfd60c5a62af28bd1f0",
-          "version": "10.22.1"
+          "revision": "6ec4ca62b00a665fa09b594fab897753a8c635fa",
+          "version": "10.23.0"
         }
       },
       {
@@ -78,8 +87,8 @@
         "repositoryURL": "https://github.com/google/grpc-binary.git",
         "state": {
           "branch": null,
-          "revision": "ea4cb5cc0c39c732b85386263116d2e2fdbbdc61",
-          "version": "1.49.2"
+          "revision": "67043f6389d0e28b38fa02d1c6952afeb04d807f",
+          "version": "1.62.1"
         }
       },
       {
@@ -87,8 +96,8 @@
         "repositoryURL": "https://github.com/google/gtm-session-fetcher.git",
         "state": {
           "branch": null,
-          "revision": "76135c9f4e1ac85459d5fec61b6f76ac47ab3a4c",
-          "version": "3.3.1"
+          "revision": "9534039303015a84837090d20fa21cae6e5eadb6",
+          "version": "3.3.2"
         }
       },
       {

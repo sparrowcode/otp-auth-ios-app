@@ -289,7 +289,7 @@ class HomeController: SPDiffableTableController {
             }
         }()
         
-        settingsSection.items.insert(
+        /*settingsSection.items.insert(
             NativeDiffableLeftButton(
                 id: "settings left review",
                 text: Texts.SettingsController.review_button,
@@ -302,7 +302,7 @@ class HomeController: SPDiffableTableController {
                 }
             ),
             at: 0
-        )
+        )*/
         
         if (showContact) {
             settingsSection.items.insert(

@@ -2,19 +2,37 @@ import UIKit
 import AVFAudio
 import SparrowKit
 import NativeUIKit
-import Firebase
 import SPIndicator
 import SwiftyJSON
+import FirebaseWrapper
+import FirebaseWrapperRemoteConfig
 
 var processCopyOTPCode: String? = nil
-var showReviewAferAddCode: Bool = false
+
+enum RemoteConfig {
+    
+    case is_request_review_after_import_code
+    
+    var key: String {
+        switch self {
+        case .is_request_review_after_import_code:
+            return "is_request_review_after_import_code"
+        }
+    }
+    
+    var bool: Bool {  FirebaseWrapper.RemoteConfig.getBool(key: key) }
+}
 
 @main
 class AppDelegate: SPAppWindowDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        FirebaseApp.configure()
+        //FirebaseApp.configure()
+        FirebaseWrapper.configure()
+        FirebaseWrapper.RemoteConfig.configure(defaults: [
+            RemoteConfig.is_request_review_after_import_code.key : NSNumber(booleanLiteral: false)
+        ])
         
         if let value = launchOptions?[.url] {
             if let url = value as? URL {
@@ -28,18 +46,6 @@ class AppDelegate: SPAppWindowDelegate {
         
         AppearanceControlService.check()
         WatchSync.configure()
-        
-        let url = URL(string: "https://otp.apps.sparrowcode.io/start")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if let data = data {
-                let json = JSON(data)
-                let state = json["flags"]["request_review_after_add_code"].bool
-                showReviewAferAddCode = state ?? false
-            }
-        }
-        task.resume()
         
         return true
     }

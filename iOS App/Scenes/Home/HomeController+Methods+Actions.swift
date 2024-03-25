@@ -221,8 +221,9 @@ extension HomeController {
                 AlertService.code_added()
                 controller?.dismissAnimated()
                 
-                if showReviewAferAddCode {
+                if RemoteConfig.is_request_review_after_import_code.bool && !UserDefaults.standard.bool(forKey: "requested_review") {
                     if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                        UserDefaults.standard.set(true, forKey: "requested_review")
                         SKStoreReviewController.requestReview(in: scene)
                     }
                 }
